@@ -1,0 +1,374 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Decentralized Identity Web Directory</title>
+<meta name="description" content="Learning to create an Identity Layer for the Internet, that is vendor agnostic and as widely interoperable, as possible, putting users in control of their personal information.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="Decentralized Identity Web Directory">
+<meta property="og:url" content="https://decentralized-id.com/identosphere-dump/open-source-projects/pico/">
+
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/did-twitter.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="Decentralized Identity Web Directory">
+  <meta name="twitter:description" content="Learning to create an Identity Layer for the Internet, that is vendor agnostic and as widely interoperable, as possible, putting users in control of their personal information.">
+  <meta name="twitter:url" content="https://decentralized-id.com/identosphere-dump/open-source-projects/pico/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://decentralized-id.com/images/did-twitter.webp">
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/identosphere-dump/open-source-projects/pico/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--page">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >Welcome</a>
+            </li><li class="masthead__menu-item">
+              <a href="/introduction/" >Introduction</a>
+            </li><li class="masthead__menu-item">
+              <a href="/posts/" >Recent</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aim/" >Aim</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <ul>
+  <li><a href="https://iiw.idcommons.net/11P/_Credential-based_login_to_a_Pico-based_application">Credential-based login to a Pico-based application</a> by Bruce Conrad
+    <blockquote>
+      <p>Verifiable credentials, authentication, picos, pico-based application</p>
+
+      <p>The slides are at <a href="https://bruceatbyu.com/s/HRDDSiiw32">https://bruceatbyu.com/s/HRDDSiiw32</a></p>
+    </blockquote>
+  </li>
+  <li><a href="https://www.windley.com/archives/2021/02/announcing_pico_engine_10.shtml">Announcing Pico Engine 1.0</a>
+    <blockquote>
+      <p>In addition to the work on the engine itself, one of the primary workstreams at present is to complete Bruce Conrad’s excellent work to use DIDs and DIDComm as the basis for inter-pico communication, called ACA-Pico (Aries Cloud Agent - Pico). […] This work is important because it will replace the current subscriptions method of connecting heterarchies of picos with DIDComm. […] because DIDComm is protocological, this will support protocol-based interactions between picos, including credential exchange.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://www.windley.com/archives/2022/07/the_most_inventive_thing_ive_done.shtml">The Most Inventive Thing I’ve Done</a> Phil Windley</li>
+</ul>
+
+<p>every pico is serverless and cloud-native, presenting an API that can be fully customized by developers. Because they’re persistent, picos support databaseless programming with intuitive data isolation. As an actor-model programming system, different picos can operate concurrently without the need for locks, making them a natural choice for easily building decentralized systems.
+W3C Press Release - <a href="https://www.w3.org/2022/07/pressrelease-did-rec">Decentralized Identifiers (DIDs) v1.0 becomes a W3C Recommendation</a> worth reading to see who contributed comments (and notice who didn’t)</p>
+
+<p>For individuals in particular, DIDs can put them back in control of their personal data and consent, and also enable more respectful bi-directional trust relationships where forgery is prevented, privacy is honored, and usability is enhanced.</p>
+
+<ul>
+  <li>
+    <p><a href="https://docs.google.com/document/d/12dWUFyL7u6OQkhnPObJOOlV-U2LDoHpF-ZQLj3hXbjA/edit">ACA-Pico working group</a></p>
+  </li>
+  <li><a href="https://github.com/Picolab/aries-cloudagent-pico">Picolab/aries-cloudagent-pico</a></li>
+  <li><a href="https://www.windley.com/archives/2021/02/announcing_pico_engine_10.shtml">Announcing Pico Engine 1.0</a>
+    <blockquote>
+      <p>In addition to the work on the engine itself, one of the primary workstreams at present is to complete Bruce Conrad’s excellent work to use DIDs and DIDComm as the basis for inter-pico communication, called ACA-Pico (Aries Cloud Agent - Pico). […] This work is important because it will replace the current subscriptions method of connecting heterarchies of picos with DIDComm. […] because DIDComm is protocological, this will support protocol-based interactions between picos, including credential exchange.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://iiw.idcommons.net/4C/_Introduction_to_Picos">Introduction to Picos</a> by Phil Windley</li>
+</ul>
+
+<p>IoT, digital twins, device shadows, Conflict-free replicated data type (CRDT), CSP over DIDcomm</p>
+
+<ul>
+  <li>
+    <p><a href="https://picolabs.io">https://picolabs.io</a> Pico Labs</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Picolab/">https://github.com/Picolab/</a> repos</p>
+  </li>
+  <li>
+    <p><a href="https://picolabs.atlassian.net/wiki">https://picolabs.atlassian.net/wiki</a> documentation</p>
+  </li>
+  <li>
+    <p><a href="http://stackoverflow.com/questions/tagged/krl">http://stackoverflow.com/questions/tagged/krl</a> programming Q&amp;A</p>
+  </li>
+  <li>
+    <p><a href="https://www.windley.com/archives/2021/02/announcing_pico_engine_10.shtml">Announcing Pico Engine 1.0</a></p>
+  </li>
+</ul>
+
+<p>Pico is short for “Persistent Compute Objects.”</p>
+
+<p>Why Picos</p>
+
+<ul>
+  <li>Persistent, personal, computational nodes → More individual autonomy</li>
+  <li>Computational node for anything: person, place, organization, smart thing, dumb thing, concept, even a pothole</li>
+  <li>Better, more scalable model for IoT → trillion node networks</li>
+  <li>Picos support social things and trustworthy spaces</li>
+  <li>Better sharing, more natural relationship-based interactions (borrow my truck, Fuse with two owners)</li>
+  <li>Scales</li>
+  <li>Substitutable hosting model → freedom of choice</li>
+  <li>
+    <p>pico mesh</p>
+  </li>
+  <li>[…]</li>
+</ul>
+
+<p>What are Picos?</p>
+
+<ul>
+  <li>“Pico” is a neologism for persistent compute objects.</li>
+  <li>Persistence is a core feature of how picos work.</li>
+  <li>Picos exhibit persistence in three ways:</li>
+  <li>Persistent identity—Picos exist, with a single identity, continuously from the moment of their creation until they are destroyed.</li>
+  <li>Persistent state—Picos have state that programs running in the pico can see and alter.</li>
+  <li>Persistent availability—Picos are always on and ready to process queries and events.</li>
+</ul>
+
+<p>Pico Engine 1.0 released in January</p>
+<ul>
+  <li><a href="https://www.windley.com/archives/2021/02/persistence_programming_and_picos.shtml">Persistence, Programming, and Picos</a> -
+    <blockquote>
+      <p>Picos show that image-based development can be done in a manner consistent with the best practices we use today without losing the important benefits it brings.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<blockquote>
+  <p>The project name, PICOS, is an abbreviation of “Privacy and Identity Management for Community Services”. The objective of the project is to advance the state of the art in technologies that provide privacy-enhanced identity and trust management features within complex community-supporting services that are built on Next Generation Networks and delivered by multiple communication service providers. The approach taken by the project is to research, develop, build trial and evaluate an open, privacy-respecting, trust-enabling identity management platform that supports the provision of community services by mobile communication service providers.</p>
+
+  <p>Learn more about the <a href="http://www.picos-project.eu/Motivation.181.0.html">motivation</a>, the <a href="http://www.picos-project.eu/Objectives.182.0.html">objectives</a>, <a href="http://www.picos-project.eu/Tasks.183.0.html">tasks</a> and <a href="http://www.picos-project.eu/Achievements.190.0.html">achievements</a> of PICOS, and get to know the PICOS exemplary <a href="http://www.picos-project.eu/Communities.184.0.html">communities</a>.</p>
+  <ul>
+    <li><a href="https://www.windley.com/archives/2021/02/announcing_pico_engine_10.shtml">Announcing Pico Engine 1.0</a> Windley</li>
+  </ul>
+</blockquote>
+
+<p>I’m excited to announce a new, stable, production-ready pico engine. The latest release of the Pico Engine (1.X) provides a more modular design that better supports future enhancements and allows picos to be less dependent on a specific engine for operation.</p>
+
+<ul>
+  <li>
+    <p><a href="https://www.windley.com/archives/2021/02/building_decentralized_applications_with_pico_networks.shtml">Building Decentralized Applications with Pico Networks</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.windley.com/archives/2021/07/ten_reasons_to_use_picos_for_your_next_decentralized_programming_project.shtml">Ten Reasons to Use Picos for Your Next Decentralized Programming Project</a></p>
+  </li>
+</ul>
+
+<p>Summary: Picos are a programming model for building decentralized applications that provide significant benefits in the form of abstractions that reduce programmer effort. Here are ten eleven reasons you should use picos for your next decentralized application. Temperature Sensor Network Built from Picos I didn’t start out to write a programming language that naturally supports</p>
+
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+  <!-- start custom analytics snippet -->
+
+
+
+
+<!-- end custom analytics snippet -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

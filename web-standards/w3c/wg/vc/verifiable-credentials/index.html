@@ -1,0 +1,1786 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Verifiable Credentials |  Decentralized Identity Web Directory</title>
+<meta name="description" content="a standard way to express credentials on the Web in a way that is cryptographically secure, privacy respecting, and machine-verifiable.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="Verifiable Credentials">
+<meta property="og:url" content="https://decentralized-id.com/web-standards/w3c/wg/vc/verifiable-credentials/">
+
+
+  <meta property="og:description" content="a standard way to express credentials on the Web in a way that is cryptographically secure, privacy respecting, and machine-verifiable.">
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/verifiable-credentials_head.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="Verifiable Credentials">
+  <meta name="twitter:description" content="a standard way to express credentials on the Web in a way that is cryptographically secure, privacy respecting, and machine-verifiable.">
+  <meta name="twitter:url" content="https://decentralized-id.com/web-standards/w3c/wg/vc/verifiable-credentials/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://decentralized-id.com/images/verifiable-credentials_head.webp">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2020-01-10T00:00:00+13:00">
+
+
+
+  <meta property="article:modified_time" content="2022-12-12T00:00:00+13:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/web-standards/w3c/wg/vc/verifiable-credentials/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/about/">Welcome</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/introduction/">Introduction</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/posts/">Recent</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/aim/">Aim</a>
+            </li>
+</ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero" style=" ">
+  
+    <img src="/images/verifiable-credentials_head.webp" alt="Verifiable Credentials" class="page__hero-image">
+  
+  
+    <span class="page__hero-caption"><a href="https://www.w3.org/TR/vc-data-model/">Verifiable Credentials Data Model</a>
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="/images/the-world-map-from-a-binary-code.webp" alt="Binary Globe by GDj">
+      
+      <h3>Identity Decentralized</h3>
+      
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox">
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/"><span class="nav__sub-title">Home</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/" class="">• Resources &amp; Pre-History</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2000-2009/" class="">• 2000-2009</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2010-2014/" class="">• 2010-2014</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2015-2019/" class="">• 2015-2019</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Feature</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/self-sovereign-identity/" class="">• SSI Literature</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/workshops/internet-identity-workshop/" class="">• IIW Session Topics</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/rebooting-web-of-trust/" class="">• RWoT Papers Index</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/blogcatcher/" class="">• Identity Blog Catcher</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/web-standards/"><span class="nav__sub-title">Web Standards</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/" class="">• W3C</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/wg/vc/verifiable-credentials/" class="active">• Verifiable Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/linked-data/JSON-LD/" class="">• JSON-LD</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/gs1/" class="">• GS1</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/blockcerts/" class="">• Blockcerts</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Regulation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/eidas/" class="">• eIDAS</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/gdpr/" class="">• GDPR</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/organizations/"><span class="nav__sub-title">Organizations</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/identity-foundation/" class="">• Identity Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/mydata/" class="">• My Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/blockchain/hyperledger/" class="">• Hyperledger Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/sovrin-foundation/" class="">• Sovrin Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/ssi-meetup/" class="">• SSI Meetup</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/women-in-identity/" class="">• Women in Identity</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">⧉InfoMine⧉</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/" class="">• Identosphere</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz/history/" class="">• Bitcoin Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub/decentralized-web/" class="">• Decentralized Web Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub" class="">• Source⧉Crypto</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz" class="">• Bitcoin Info</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://infominer.xyz/" class="">• InfoHub</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Verifiable Credentials">
+    <meta itemprop="description" content="Verifiable credentials (VCs) are the electronic equivalent of the physical credentials that we all possess today, such as: plastic cards, passports, driving licenses, qualifications and awards, etc. The data model for verifiable credentials is a World Wide Web Consortium Recommendation, “Verifiable Credentials Data Model 1.0 - Expressing verifiable information on the Web” published 19 November 2019.">
+    <meta itemprop="datePublished" content="January 10, 2020">
+    <meta itemprop="dateModified" content="December 12, 2022">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Verifiable Credentials
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  20 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-link"></i> Contents</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#specification">Specification</a></li>
+  <li><a href="#explainer">Explainer</a></li>
+  <li><a href="#comparisons-with-other-tech">Comparisons with other Tech</a></li>
+  <li><a href="#development">Development</a></li>
+  <li><a href="#literature">Literature</a></li>
+  <li>
+<a href="#working-groups">Working Groups</a>
+    <ul>
+      <li><a href="#verifiable-claims-working-group">Verifiable Claims Working Group</a></li>
+      <li>
+<a href="#credentials-community-group">Credentials Community Group</a>
+        <ul>
+          <li>
+<a href="#verifiable-credentials-extension-registry">Verifiable Credentials Extension Registry</a>
+            <ul>
+              <li><a href="#31-proof-methods">3.1 Proof Methods</a></li>
+              <li><a href="#32-status-methods">3.2 Status Methods</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#claims-and-credentials-working-group">Claims and Credentials Working Group</a></li>
+    </ul>
+  </li>
+  <li><a href="#interoperability">Interoperability</a></li>
+  <li><a href="#use-case">Use Case</a></li>
+  <li><a href="#user-experience">User Experience</a></li>
+  <li>
+<a href="#critique">Critique</a>
+    <ul>
+      <li><a href="#thread-vcs-need-threat-modeling">Thread: VCs need Threat Modeling</a></li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <blockquote>
+  <p>Verifiable credentials (VCs) are the electronic equivalent of the physical credentials that we all possess today, such as: plastic cards, passports, driving licences, qualifications and awards, etc. The data model for verifiable credentials is a World Wide Web Consortium Recommendation, “Verifiable Credentials Data Model 1.0 - Expressing verifiable information on the Web” published 19 November 2019. - <a href="https://en.wikipedia.org/wiki/Verifiable_credentials">Wikipedia</a></p>
+</blockquote>
+
+<h2 id="specification">Specification</h2>
+
+<ul>
+  <li>
+<a href="https://lists.w3.org/Archives/Public/public-credentials/2022Mar/0005.html">Verifiable Credentials Data Model v1.1 is an official W3C standard!</a>  Manu Sporny (Thursday, 3 March, 2022)
+    <ul>
+      <li>
+<a href="https://www.w3.org/TR/2022/REC-vc-data-model-20220303/">Verifiable Credentials Data Model v1.1</a> (RECOMMEND)</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://www.w3.org/TR/vc-data-model-2.0/">Verifiable Credentials Data Model v2.0</a> (DRAFT)
+    <blockquote>
+      <ul>
+        <li>The components that constitute a <a href="https://www.w3.org/TR/2022/WD-vc-data-model-2.0-20220811/%23dfn-verifiable-credentials">verifiable credential</a>
+</li>
+        <li>The components that constitute a <a href="https://www.w3.org/TR/2022/WD-vc-data-model-2.0-20220811/%23dfn-verifiable-presentations">verifiable presentation</a>
+</li>
+        <li>An ecosystem where <a href="https://www.w3.org/TR/2022/WD-vc-data-model-2.0-20220811/%23dfn-verifiable-credentials">verifiable credentials</a> and <a href="https://www.w3.org/TR/2022/WD-vc-data-model-2.0-20220811/%23dfn-verifiable-presentations">verifiable presentations</a> are expected to be useful</li>
+        <li>The use cases and requirements that informed this specification.</li>
+      </ul>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="explainer">Explainer</h2>
+
+<p><a href="https://docs.google.com/presentation/d/1GMQy4rI093c_9zojwLRgp2r-fTscpDUSfX-wqwBk4j4/edit#slide=id.g3605fe1474_2_0"><img src="https://i.imgur.com/TeMxwwW.png" alt="IIW26 Primer On DIDs and VCs"></a></p>
+<blockquote>
+  <p>A new type of globally resolvable, cryptographically-verifiable identifier, registered directly on a distributed ledger (aka Blockchain)</p>
+</blockquote>
+
+<ul>
+  <li>
+<a href="https://www.evernym.com/blog/gentle-introduction-verifiable-credentials/">A Gentle Introduction to Verifiable Credentials</a>
+    <blockquote>
+      <p>But while digital records are nothing new, today’s credentials come with certain ‘cryptographic superpowers’ that make them tamperproof, secure, and verifiable. Whereas a simple digital copy of a car title can easily be edited, a verifiable digital credential is one that has been issued by a trusted authority for, and only for, its holder.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/topics-and-advance-readings/verifiable-credentials-primer.md">A Verifiable Credentials Primer</a>
+    <blockquote>
+      <p>NOTE: “Verifiable Claims” are now known as “Verifiable Credentials”. The W3C Verifiable Claims Working Group’s experience with using the term “Verifiable Claims” demonstrated that it led to confusion in the marketplace. The group has since found consensus in shifting to use the term “Verifiable Credentials”, which contain “Claims”.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="http://ssimeetup.org/verifiable-credentials-101-ssi-tyler-ruff-webinar-11/">Verifiable Credentials 101 for SSI - Tyler Ruff - Webinar 11</a>
+    <blockquote>
+      <p>Tyler Ruff, product manager at Evernym, will be our next guest to walk us through Verifiable Credentials in the context of Self-Sovereign Identity. He will cover how they are created, issued and shared, as well as cover some common technical questions.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://vonx.io/safeentry/vcs/">Verifiable Credentials—A Quick Overview</a> (VonX)
+    <blockquote>
+      <p>The following is a brief overview of the technology underlying SafeEntryBC—Verifiable Credentials. In reading this, think of the process you went through to get an official government document, like a drivers license.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://hackernoon.com/verifiable-credentials-what-they-are-why-they-matter-kl133t3d">Verifiable Credentials: What They Are, Why They Matter</a> (Hackernoon)
+    <blockquote>
+      <p>From permanent resident cards to anonymous payments to automatic notarization, verifiable credentials and DIDs are a technology whose time has arrived. Use cases are currently being piloted; many will surface in coming months and years. Security on the internet as we know it may be broken, but it is not beyond saving. A touch of the cryptographic wand, and we’ll be able to repair trust once more.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.arcblock.io/en/post/2020/04/15/verifiable-credentials">Understand Verifiable Cresidentials in 10 Minutes</a>
+    <blockquote>
+      <p>This article is a soft introduction into Verifiable Credentials and the potential use cases for organizations, businesses and government institutions and creating new levels of trust for individuals and the services/institutions they use.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://academy.affinidi.com/what-are-verifiable-credentials-79f1846a7b9">What are Verifiable Credentials</a></li>
+  <li>
+<a href="https://blockster.global/self-sovereign-identity/">How W3C Verifiable Credentials (VC) Work: Part 1 – Issuance</a>
+    <blockquote>
+      <p>When an issuer creates a verifiable credential, it contains following information –</p>
+
+      <ul>
+        <li>Who has issued – DID of the Issuer</li>
+        <li>To whom it is issued – User Identifier</li>
+        <li>Attributes of the credential – Details of the credential being Issued</li>
+        <li>When it is Issued – Date of issuance</li>
+        <li>Credential proof with Issuer signature that makes it tamper evident</li>
+        <li>Revocation details</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://medium.com/@m.ruminer/on-the-role-of-witness-organizations-in-self-sovereign-identity-or-vcs-aren-t-just-p2p-e2cbafce6928">The Role of Witness Organizations in Verifiable Credentials</a>
+    <blockquote>
+      <p>The basis is that not every source of a verifiable credential has an interest in issuing verifiable credentials and that it is not only logical but beneficial to the ecosystem of trust that witness organizations will issue on behalf of these sources.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://hackernoon.com/understanding-the-verifiable-credentials-vcs-it1535e9">An introductory dive into VCs (verifiable credentials)</a> HackerNoon
+    <blockquote>
+      <p>Verifiable Credentials heavily utilize Decentralized Identifiers to identify people, organizations, and things and to achieve a number of security and privacy-protecting guarantees. They are issued and cryptographically signed documents, intended to be understood by computers rather than people.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.evernym.com/blog/how-does-a-verifier-know-the-credential-is-yours/">How Does a Verifier Know the Credential is Yours?</a> Evernym
+    <blockquote>
+      <p>A link secret is a large random number, wrapped in a way that allows the holder to prove that they know the secret.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.ubisecure.com/identity-management/verifiable-credentials/">Introduction to Verifiable Credentials</a> Ubisecure
+    <blockquote>
+      <p>The Verifiable Credentials specification is quite new, and many pieces that are required to create interoperable solutions are still incomplete or missing at time of writing. However, there is significant momentum around verifiable credentials (VCs). This is partly attributed to VCs being part of the solution for blockchain-based decentralised identity.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://academy.affinidi.com/8-reasons-to-use-verifiable-credentials-300833276b52">8 Reasons to use Verifiable Credentials</a> Affinidi
+    <blockquote>
+      <p>VCs are interoperable across many systems and can be used in almost every possible scenario.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.youtube.com/watch?v%3Ds5h7OgmnrxE">What are Verifiable Credentials in 3 Minutes</a> Affinidi (video)</li>
+  <li>
+<a href="https://credentialmaster.com/the-vc-lifecycle/">The VC Lifecycle</a> Credential Master
+    <blockquote>
+      <p>In 1956 the switch to consistent shipping containers began, and it changed the physical world <a href="https://www.economist.com/finance-and-economics/2013/05/18/the-humble-hero">profoundly</a>; the switch to consistent, authenticatable digital data containers <a href="https://rufftimo.medium.com/like-shipping-containers-verifiable-credentials-will-economically-transform-the-world-fece2b9da14a">will do the same for cyberspace</a>.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://credentialmaster.com/verifiable-credentials-arent-credentials-theyre-containers/">Verifiable Credentials Aren’t Credentials. And They’re Not Verifiable In the Way You Might Think</a> Timothy Ruff
+    <blockquote>
+      <p>think “authenticatable data container” […]</p>
+
+      <p>VCs can carry any sort of data payload, and that isn’t just a good thing, it’s a great one. <a href="https://medium.com/@rufftimo/like-shipping-containers-verifiable-credentials-will-economically-transform-the-world-fece2b9da14a">Part two</a> of my container series covers how such fluid data portability could economically affect cyberspace to a degree comparable to how shipping containers affected global trade.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.helpnetsecurity.com/2021/07/26/verifiable-credentials/">Verifiable credentials are key to the future of online privacy</a> HelpNetSecurity
+    <blockquote>
+      <ul>
+        <li>All the data is decentralized, meaning there’s no need for a database of student records that could be jeopardized. Alice’s data lives with her.</li>
+        <li>The employer doesn’t need to keep a copy of Alice’s transcript to verify her education.</li>
+        <li>The college doesn’t play intermediary and doesn’t have access to the list of organizations Alice shares her data with. Other parties have no way of correlating this data as each exchange is private and unique.</li>
+        <li>If desired, Alice could pick and choose what she wants to share. She could prove her degree without sharing her date of graduation or GPA, for example.</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://medium.com/affinidi/what-are-verifiable-credentials-79f1846a7b9">What are Verifiable Credentials?</a>
+    <blockquote>
+      <p>At the most basic level, verifiable credentials, or VC in short, are tamper-proof credentials that can be verified cryptographically.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://iiw.idcommons.net/23G/_Self_Attested_vs_Chain_of_Custody_-_assurance_levels_in_data_provenance_in_VCs">Self Attested vs Chain of Custody - assurance levels in data provenance in VCs</a> by Stew Whitman &amp; Alka Lachhwani
+    <blockquote>
+      <p>There are two important factors in establishing “truth” or the trustworthiness of the information. Attributional and Reputational. You need to have both to have trust.</p>
+
+      <p>Digital needs higher level of attestation because it is easier to forge and easier to propagate that forgery.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://verifiablecredential.io/learn">VerifiableCredential.io</a>
+    <blockquote>
+      <p>Learn about verifiable credentials, then head to the playground to view examples, explore multiple use-cases and start using them.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://community.rsa.com/t5/rsa-labs-blog/do-i-need-a-verifiable-credential/ba-p/610241">Do I Need a Verifiable Credential?</a> RSA</li>
+  <li>
+<a href="https://pranavkirtani.medium.com/how-a-combination-of-federated-identity-and-verifiable-credentials-can-help-with-customer-7e6518feb018">How a combination of Federated identity and Verifiable Credentials can help with Customer onboarding</a> Pranav Kirtani
+    <blockquote>
+      <p>Before we dive into how Federated systems like OIDC and SAML along with Verifiable Credentials (VC) can help improve customer onboarding to your application, let us first understand what are the current methods being used for onboarding.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="comparisons-with-other-tech">Comparisons with other Tech</h2>
+<ul>
+  <li>
+<a href="https://academy.affinidi.com/compare-and-contrast-openbadges-vs-verifiable-credentials-d504c054d5db">Compare and Contrast: OpenBadges vs Verifiable Credentials</a> Affinidi
+    <blockquote>
+      <p>As we move towards a world of digital identity, many ways of sharing and verifying Personally Identifiable Information are emerging. Two such modes that we’ll talk about today are Open Badges and Verifiable Credentials.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://academy.affinidi.com/non-fungible-tokens-nfts-vs-verifiable-credentials-vcs-cd0ebb13f1fb">Non-Fungible Tokens (NFTs) vs Verifiable Credentials (VCs)</a> Affinidi
+    <blockquote>
+      <p>A common thread that connects both NFTs and VCs is that they leverage the potential benefits of the digital world to give users more security, flexibility, and freedom to monetize.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://lists.w3.org/Archives/Public/public-credentials/2021Feb/0059.html">ERC-721 Non-Fungible Token Standard on Ethereum vs. VCs on Hyperledger Indy</a> Michael Herman
+    <blockquote>
+      <p>When are Hyperledger Indy/Sovrin VCs better than Ethereum smart contracts for NFEs/NFTs (non-fungible entities/tokens)?</p>
+
+      <p>It seems obvious but I don’t have a detailed/worked out answer.  One project I’m associated with wants to use the <a href="https://eips.ethereum.org/EIPS/eip-721">ERC-721 Non-Fungible Token Standard</a> on Ethereum but I believe VCs are a better route to take. Part of the desire to stay on Ethereum is there is quite a vibrant NFT community on Ethereum and lots of different EC-721 tokens.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://academy.affinidi.com/compare-and-contrast-irma-vs-verifiable-credentials-58e4b30d85f1">Compare and Contrast — IRMA vs Verifiable Credentials</a></li>
+  <li>
+<a href="https://iiw.idcommons.net/20I/_Could_an_NFT_be_a_VC%253F">Could an NFT be a VC?</a> by Grace Rachmany
+    <blockquote>
+      <p>Case discussed: A group of villages in Africa using a cryptocurrency platform for alternative currencies. Different organizations issue the coins under different circumstances. When you accept a currency, you want to know who is the issuer. The Red Cross might be more or less trusted than the local leader or agricultural cooperative as the issuer of a currency that is supposedly equivalent to a shilling.</p>
+
+      <p>What types of tech could be used for this?</p>
+
+      <ul>
+        <li>Multiple currencies on the blockchains</li>
+        <li>Certifications in the form of some kind of NFT issued by the issuer.</li>
+        <li>Limited supply tokens or NFTs that are “expired” when you use them</li>
+        <li>Open Credential Publisher framework was suggested</li>
+        <li>VCs are generally authorizations associated with a person, so maybe a person could have the VC and show their credit rating in some way while they are making a transaction</li>
+        <li>Similarly maybe the VC belongs to the organization that is issuing the coin, proving its reputation over time.</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://twitter.com/rufftimo/status/1301314001251438593">How does VC Functional Stack compare to #ToIP Stack?</a> <a href="https://twitter.com/rufftimo" class="user-mention">@rufftimo</a>
+    <blockquote>
+      <ol>
+        <li>ToIP Layers 2 &amp; 3 compare to Functional Layer 2</li>
+        <li>ToIP Layer 4 compares to Functional Layers 3 &amp; 4 (horizontal layer for VC Management, vertical layer for Applications)</li>
+        <li>Functional stack doesn’t require #blockchain</li>
+        <li>Functional Stack doesn’t detail steps for trust or verification; ToIP Stack doesn’t separate management or storage</li>
+        <li>Functional Stack clarifies functions, roles, and potential business models; ToIP stack clarifies trust &amp; security They are complementary, not contradictory.
+<img src="https://i.imgur.com/8zakrMQ.png" alt="">
+</li>
+      </ol>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://lists.w3.org/Archives/Public/public-credentials/2021Aug/0338.html">What are VCs similar to?</a> Michael Herman (Trusted Digital Web) (Monday, 23 August)
+    <blockquote>
+      <p>The chip in your e-passport is the analogy I’ve been most successful with<br>
+An issuer gives it to you.<br>
+You carry it around and show to whom you choose<br>
+The verifier can check its integrity without contacting the issuer<br>
+“A VC is like the chip in your passport - bit for any document type”<br>
+So far the best analogy I’ve found.  Policy makers say “ah, I see”…</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://fossandcrafts.org/episodes/20-hygiene-for-a-computing-pandemic.html">Hygiene for a computing pandemic</a>
+    <blockquote>
+      <p>This episode of FOSS and Crafts features Christopher Lemmer Webber discussing the object capability security approach. Its a generalization not specific to VCs, continuing from the conversation on the CCG mailinglist, <a href="https://lists.w3.org/Archives/Public/public-credentials/2020Dec/0028.html">Hygiene for a computing pandemic: separation of VCs and ocaps/zcaps</a>, we shared last month.
+The podcast <em>show-notes include an epic list of references</em> supporting the discussion.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://lists.w3.org/Archives/Public/public-credentials/2021Jun/0244.html">Re: The dangers of using VCs as permission tokens (was: PROPOSALs for VC HTTP API call on 2021-06-22)</a> Manu Sporny
+    <blockquote>
+      <p>On 6/24/21 12:35 PM, Kyle Den Hartog wrote:</p>
+      <blockquote>
+        <p>Agreed, when it comes to the number of checks that occur it’s much greater
+because of the delegation. With that in mind, looking at the semantics only
+of the system VCs in my opinion weren’t optimally designed for permission
+tokens. This difference between the two requires that an implementation
+that wants to support both claims tokens and permissions tokens has to
+grapple with the different mental model that arise when trying to stuff
+these things together. This introduces additional complexity. Additionally
+it leads to weird statements that are being made where it’s difficult to
+tell if the VC is behaving like a claims token or a permissions token.</p>
+      </blockquote>
+
+      <p>Yes, exactly this. Exactly what Kyle states above is the reason why it’s so complicated (and thus dangerous) to use VCs as permissions tokens.</p>
+
+      <p>This is one of the primary reasons that we separated out the Authorization Capabilities work from the Verifiable Credentials work. Things get really complicated when you start mixing authz/authn/claims/permissions into a Verifiable Credential. Just because you can do it doesn’t mean you should.</p>
+
+      <p><a href="https://kyledenhartog.com/example-authz-with-VCs/">https://kyledenhartog.com/example-authz-with-VCs/</a></p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://kyledenhartog.com/comparing-VCs-with-zcaps/">Comparing VCs to ZCAP-LD</a> Kyle Den Hartog
+    <blockquote>
+      <p>Why make the investment then to put the time and effort into ZCAPs when we’ve already got VCs? Simply put because security is hard and trying to push square pegs into round holes often times leads to bugs which are elevated to mission critical authentication/authorization bypass vulnerabilities. By designing around a fit for purpose data model with a well defined problem being solved it allows for us to be much more precise about where we believe extensibility is important versus where normative statements should be made to simplify the processing of the data models. By extension this leads to a simpler security model and likely a much more robust design with fewer vulnerabilities.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://lists.w3.org/Archives/Public/public-credentials/2020Dec/0027.html">Re: VCs - zCaps / OCap a Discussion</a> Dave Longley 12/5
+    <blockquote>
+      <p>TL; DR: My current view is that the main confusion here may be over the difference between VCs and LD Proofs, not VCs and ZCAPs. VCs are not a generalized container for attaching a cryptographic proof to a document. That’s what LD proofs (or JOSE style proofs) are for. VCs <em>use</em> LD proofs (or JOSE style proofs) to attach an assertion proof to a document that specifically models statements made by an issuer about some subject, which is therefore inherently about the identity of that subject.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="development">Development</h2>
+<ul>
+  <li>
+<a href="https://kyledenhartog.com/example-authz-with-VCs/">Example Design of an Authorization System with Verifiable Credentials and the Tradeoffs</a> Kyle Den Hartog
+    <blockquote>
+      <p>The primary focus of this blog post is to highlight the different problems that are likely to occur when going down the path of building an authorization system with verifiable credentials. I’ll be sure to keep things at a higher level so that anyone can understand these tradeoffs, but take you through the details that would be thought through by an architect designing the system.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://iiw.idcommons.net/index.php?title%3D12L/_Managing_VCs_at_Scale_%2526_the_VC_Stack%26action%3Dedit%26redlink%3D1">Managing VCs at scale &amp; the VC Stack</a> by Timothy Ruff &amp; Alan Davies</li>
+  <li>
+<a href="https://medium.com/51nodes/indexing-and-querying-revoked-verifiable-credentials-e229dc2781d4">Indexing and Querying Revoked Verifiable Credentials</a> 51 Nodes
+    <blockquote>
+      <p>this article describes a simple approach to revoke verifiable credentials and a decentralized and efficient way to index and query those revoked credentials using the <a href="https://thegraph.com/en/">Graph protocol</a>.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="literature">Literature</h2>
+
+<ul>
+  <li>
+<a href="https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/VC_Enhancement_Strategy.md">VC Spec Enhancement Proposal</a> Sam Smith
+    <blockquote>
+      <p>the VC standard appears to be an adoption vector for Linked Data, not the other way around. My overriding interest is that the concept of a VC as a securely attributable statement is a very powerful and attractive one and therefore should be widely adopted. We should therefore be picking the best technologies that best support broad VC adoption, not the other way around.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.windley.com/archives/2018/12/verifiable_credential_exchange.shtml">Verifiable Credential Exchange</a>
+    <blockquote>
+      <p>Multi-source identity (MSI) depends on issuing, exchanging, and verifying digital credentials. The specification for verifiable credentials is being formulated by the World Wide Web Consortium’s Verifiable Credentials Working Group. Verifiable credentials provide a standard way to express credentials in a way that is cryptographically secure, privacy respecting, and automatically verifiable.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://arxiv.org/abs/1909.02895">Full-text Search for Verifiable Credential Metadata on Distributed Ledgers</a>
+    <blockquote>
+      <p>The proposed solution is able to find credential types based on textual input from the user by using a full-text search engine and maintaining a local copy of the ledger. Thus, we do not need to rely on information about credentials coming from a very large candidate pool of third parties we would need to trust, such as the website of a company displaying its own identifier and a list of issued credentials. We have also proven the feasiblity of the concept by implementing and evaluating a prototype of the full-text credential metadata search service.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.ndss-symposium.org/wp-content/uploads/diss2019_05_Lagutin_paper.pdf">Enabling Decentralised Identifiers and Verifiable Credentials for Constrained IoT Devices using OAuth-based Delegation</a>
+    <blockquote>
+      <p>Abstract—Decentralised identifiers (DIDs) and verifiable credentials (VCs) are upcoming standards for self-sovereign privacypreserving identifiers and authorisation, respectively. This focus on privacy can help improve many services and open up new business models, but using DIDs and VCs directly on constrained IoT devices can be problematic due to the management and resource overhead. This paper presents an OAuth-based method to delegate the processing and access policy management to the Authorisation Server thus allowing also systems with constrained IoT devices to benefit from DIDs and VCs.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://arxiv.org/abs/2006.04754">Distributed-Ledger-based Authentication with Decentralized Identifiers and Verifiable Credentials</a>
+    <blockquote>
+      <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> Authentication with username and password is becoming an inconvenient process for the user. End users typically have little control over their personal privacy, and data breaches effecting millions of users have already happened several times. We have implemented a proof of concept decentralized OpenID Connect Provider by marrying it with Self-Sovereign Identity, which gives users the freedom to choose from a very large pool of identity providers instead of just a select few corporations, thus enabling the democratization of the highly centralized digital identity landscape. Furthermore, we propose a verifiable credential powered decentralized Public Key Infrastructure using distributed ledger technologies, which creates a straightforward and verifiable way for retrieving digital certificates. 
+</code></pre></div>      </div>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://github.com/WebOfTrustInfo/rwot9-prague/blob/master/topics-and-advance-readings/verifiable-credentials-proof-request.md">Addition of Proof Request/Response to a formal Verifiable Credentials specification</a>
+    <blockquote>
+      <p>The W3C Verifiable Credentials (hereafter VC) specification does not currently outline how credential data should be requested by a Verifier. This document outlines the approach taken at Workday and proposes it as an addition or companion to the VC spec.</p>
+
+      <p>At RWoT we wish to present our approach in order to get community feedback and consensus. Workday recently announced our credentialing platform and will shortly begin to issue credentials within our market verticals. We fully intend to support the community standards around credentialing and therefore wish to drive consensus in the community on a simple, standard approach for requesting and sharing VCs between a holder and verifier.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://tsmatz.wordpress.com/2020/06/25/what-is-verifiable-credentials/">Verifiable Credentials (DID Credential Flows) : Technical Overview</a>
+    <blockquote>
+      <p>In the perspective of W3C specification, verifiable credential (VC) doesn’t rely on DID specification. (i.e, The “id” property used in VC shouldn’t be necessarily a DID.) However, in its real implementations, it might be expected that verifiable credentials will resolve DIDs with consistent decentralized manners and technologies. Then, in this post, we also assume that DID is used with verifiable credentials.</p>
+
+      <p>In order to explain things plainly, I’ll include not only VC flows, but also other parts of flows, such as, DID flows or OpenID compliant flows.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="working-groups">Working Groups</h2>
+<h3 id="verifiable-claims-working-group">Verifiable Claims Working Group</h3>
+
+<ul>
+  <li><a href="https://www.w3.org/2017/vc/WG/">W3C Verifiable Claims Working Group</a></li>
+  <li>
+<a href="https://www.w3.org/TR/vc-data-model/">Verifiable Credentials Data Model 1.0</a>
+    <blockquote>
+      <p>Credentials are a part of our daily lives; driver’s licenses are used to assert that we are capable of operating a motor vehicle, university degrees can be used to assert our level of education, and government-issued passports enable us to travel between countries. This specification provides a mechanism to express these sorts of credentials on the Web in a way that is cryptographically secure, privacy respecting, and machine-verifiable.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://w3c.github.io/vc-imp-guide/">Verifiable Credentials Implementation Guidelines 1.0</a>
+    <blockquote>
+      <p>This guide provides some examples and resources for implementing protocols which make use of verifiable credentials, beyond those available in the core specification.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://w3c.github.io/vc-test-suite/">W3C Verifiable Claims Working Group Test Suite</a></li>
+  <li>
+<a href="https://www.w3.org/TR/vc-use-cases/">Verifiable Credentials Use Cases</a>
+    <blockquote>
+      <p>This document does NOT attempt to define an architecture for the support of Verifiable Claims. Instead it expresses the sorts of needs that real users have that could be addressed through support for some sort of self-sovereign claim environment. It attempts to use terminology that is consistent with the other deliverables of the Verifiable Claims Working Group (you can see the relevant terms in Appendix A).</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p><a href="https://www.w3.org/TR/vc-use-cases/"><img src="https://i.imgur.com/J2IgVgl.png" alt=""></a></p>
+
+<h3 id="credentials-community-group">Credentials Community Group</h3>
+
+<ul>
+  <li>
+<a href="https://www.w3.org/community/credentials/">Credentials Community Group</a> • <a href="https://w3c-ccg.github.io/">Website</a> • <a href="http://lists.w3.org/Archives/Public/public-credentials/">Mail archive</a>
+    <blockquote>
+      <p>The mission of the Credentials Community Group is to explore the creation, storage, presentation, verification, and user control of credentials. We focus on a verifiable credential (a set of claims) created by an issuer about a subject—a person, group, or thing—and seek solutions inclusive of approaches such as: self-sovereign identity; presentation of proofs by the bearer; data minimization; and centralized, federated, and decentralized registry and identity systems. Our tasks include drafting and incubating Internet specifications for further standardization and prototyping and testing reference implementations.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://github.com/w3c-ccg/vc-extension-registry">w3c-ccg/vc-extension-registry</a>
+REGISTRY: The Verifiable Credentials Extension Registry - w3c-ccg/vc-extension-registry</li>
+  <li>
+<a href="https://github.com/w3c-ccg/edu_occ_verifiable_credentials">w3c-ccg/edu_occ_verifiable_credentials</a>
+WORK ITEM: Drafts and Ideas of Educational and Occupational Verifiable Credentials - w3c-ccg/edu_occ_verifiable_credentials</li>
+  <li>
+<a href="https://github.com/w3c-ccg/vc-examples">w3c-ccg/vc-examples</a>
+WORK ITEM: Verifiable Credentials Examples.</li>
+</ul>
+
+<h4 id="verifiable-credentials-extension-registry">Verifiable Credentials Extension Registry</h4>
+
+<ul>
+  <li>
+<a href="https://w3c-ccg.github.io/vc-extension-registry/">Verifiable Credentials Extension Registry</a> - This document contains a list of all known Verifiable Credential extensions and their associated specifications.</li>
+</ul>
+
+<h5 id="31-proof-methods">3.1 Proof Methods</h5>
+
+<blockquote>
+  <p>This table summarizes the Proof Method specifications currently in development. The table lists the method name, associated specification, authors, stability of the specification, and conformance test suite (if applicable).</p>
+</blockquote>
+
+<ul>
+  <li>
+<a href="https://w3c-dvcg.github.io/lds-ed25519-2018/">Ed25519Signature2018</a> by Markus Sabadello</li>
+  <li>
+<a href="https://w3c-dvcg.github.io/lds-rsa2018/">RsaSignature2018</a> - Manu Sporny, Dave Longley</li>
+</ul>
+
+<h5 id="32-status-methods">3.2 Status Methods</h5>
+
+<ul>
+  <li>
+<a href="https://w3c-ccg.github.io/vc-csl2017/">CredentialStatusList2017</a> - Manu Sporny, Dave Longley</li>
+</ul>
+
+<h3 id="claims-and-credentials-working-group">Claims and Credentials Working Group</h3>
+
+<p><a href="https://identity.foundation/working-groups/claims-credentials.html">Claims and Credentials Working Group</a> - Decentralized Identity Foundation</p>
+
+<ul>
+  <li>
+<a href="https://github.com/decentralized-identity/lds-ecdsa-secp256k1-2019.js">2019 JSON-LD Signature Suite</a>
+    <ul>
+      <li>
+<a href="https://w3c-ccg.github.io/lds-ecdsa-secp256k1-2019/">Ecdsa Secp256k1 Signature 2019</a> - CCG Draft Community Group Report 08 April 2020</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://github.com/decentralized-identity/presentation-exchange">presentation-exchange</a>
+    <blockquote>
+      <p>Specification that codifies an inter-related pair of data formats for defining proof presentations (Presentation Definition) and subsequent proof submissions
+ (Presentation Submission)</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://github.com/decentralized-identity/presentation-request">presentation-request</a>
+    <blockquote>
+      <p>Requirements Analysis and Protocol Design for a VC Presentation Request Format</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://github.com/decentralized-identity/credential-manifest">Credential Manifest</a>
+    <ul>
+      <li>
+<a href="https://github.com/decentralized-identity/credential-manifest/blob/master/explainer.md">Explainer</a>
+        <blockquote>
+          <p>Creating trust between DIDs and gaining access to products, services, and systems with DIDs requires the acquisition, generation, and inspection of credentials (DID-signed data objects).</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://w3c-ccg.github.io/vc-json-schemas/">Specification</a> - <a href="https://github.com/w3c-ccg/vc-json-schemas">GitHub</a>
+    <blockquote>
+      <p>The <a href="https://www.w3.org/TR/vc-data-model/">VC_DATA_MODEL</a> specifies the models used for Verifiable Credentials and Verifiable Presentations, and explains the relationships between three parties: issuer, holder, and verifier. A critical piece of infrastructure out of the scope of those specifications is the Credential Schema.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="interoperability">Interoperability</h2>
+
+<ul>
+  <li>
+<a href="https://github.com/decentralized-identity/vc-spec-map">Verifiable Credentials Specification Relationships</a> (<a href="https://lists.w3.org/Archives/Public/public-credentials/2020Nov/0100.html">ANN</a>)
+    <blockquote>
+      <p>diagrams and documentation on the relationship of verfiable credential specifications</p>
+
+      <p>The current release contains some of the most core specifications and their related specs in a diagram. It does not yet address some of the items especially under DIF work groups for secure data storage, SIOP, Sidetree etc.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p><a href="https://github.com/decentralized-identity/vc-spec-map/releases/tag/v1.2.0"><img src="/images/VC-spec-map.webp" alt=""></a></p>
+
+<p><a href="https://translate.google.com/translate?sl=auto&amp;tl=en&amp;u=https://kristinayasuda.com/posts/decentralized-identity-catch-up-path/">Distributed ID Learning Path</a> by Christina Yasuda (based on above spec map)</p>
+<ul>
+  <li>Pre-Requisite Knowledge: <a href="https://www.json.org/json-en.html">JSON</a>, <a href="https://json-ld.org">JSON-LD</a>, <a href="https://jwt.io/introduction/">JWT</a>, <a href="https://w3c-ccg.github.io/lds-jws2020/">JWS</a>, <a href="https://tools.ietf.org/html/rfc7517">JWK</a>, <a href="https://tools.ietf.org/html/rfc7518">JWA</a>, and sometimes <a href="https://cbor.io/">CBOR</a>.</li>
+  <li>Decentralized Identifiers: <a href="https://www.w3.org/TR/did-core/">DID-Core</a>, <a href="https://w3c-ccg.github.io/did-resolution/">DID-Resolution</a>, <a href="https://www.w3.org/TR/did-spec-registries/">DID-Spec</a>, <a href="https://www.w3.org/TR/did-use-cases/">DID Use-Cases</a>.</li>
+  <li>Verifiable Credentials: <a href="https://www.w3.org/TR/vc-data-model/">VC-Data Model</a>, <a href="https://www.w3.org/TR/vc-use-cases/">VC Use-Cases</a>, and <a href="https://www.w3.org/TR/vc-imp-guide/">VC-Implementors Guide</a>
+</li>
+  <li>Transport: HTMl, <a href="https://identity.foundation/working-groups/did-comm.html">DID-Comm</a>
+</li>
+  <li>Credential Presentation: <a href="https://identity.foundation/presentation-exchange/">Presentation Exchange</a>, <a href="https://identity.foundation/credential-manifest/">Credential Manifest</a>
+</li>
+  <li>Optional: <a href="https://identity.foundation/.well-known/resources/did-configuration/">Well-known-did</a>
+</li>
+  <li>Other Data Formats: <a href="https://openbadges.org/">Open Badges</a>
+    <ul>
+      <li>Independent DID Methods: <a href="https://w3c-ccg.github.io/did-method-key/">DID-method-key</a>, <a href="https://identity.foundation/peer-did-method-spec/">DID-method-peer</a>, DID-method-web</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://www.evernym.com/blog/categorizing-verifiable-credentials/">Categorizing Verifiable Credentials - Evernym</a>
+    <blockquote>
+      <p>Not all verifiable credentials are created the same. This post examines the categories of credentials and the architectural choices driving this variation.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://github.com/decentralized-identity/interoperability/blob/master/assets/ssi-architectural-stack--and--community-efforts-overview.pdf">SSI Architectural Stack and Community Efforts Overview</a>
+    <blockquote>
+      <p>While a more thorough (and competitive) separation of concerns might slice today’s and tomorrow’s identity systems into more modular and interchangeable parts at many more layers, the diagram used here organizes the space into just three broad divisions, which map roughly to the bottom three in the mapping dominant in the Aries &amp; ToIP communities. For a more detailed and complex mapping, see the forthcoming map by the DIF interoperability working group.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/decentralized-identity/interoperability/blob/master/assets/interoperability-mapping-exercise-10-12-20.pdf">Interoperability Mapping Exercise</a></li>
+  <li><a href="https://gist.github.com/creatornader/c8a20c534d3cf8f65a9b34ce2ad81725">creatornader/Decentralized Identity Standards.md</a></li>
+</ul>
+
+<h2 id="use-case">Use Case</h2>
+
+<ul>
+  <li>
+<a href="https://thepaypers.com/expert-opinion/better-digital-living-with-blockchain-backed-verifiable-credentials--1250869">Better digital living with blockchain-backed verifiable credentials</a> The Paypers
+    <blockquote>
+      <p>The NHS can now provide you with a digital verifiable credential to prove your vaccination status, securely stored in the NHS app and easily accessible, generating a QR code to prove to airlines and employers that you are fit to fly or work. But this is just the first step in the development of an enabling technology that can bring benefits to many areas of modern life.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.velocitynetwork.foundation/on-climate-crisis-and-self-sovereign-verifiable-career-credentials/">On Climate Crisis and Self-Sovereign Verifiable Career Credentials</a> Velocity Network
+    <blockquote>
+      <p>This rich verifiable self-sovereign career identity will be the ‘great transformer’ of the global labor market. It will change the way people navigate their careers and livelihoods, and how employers make talent decisions.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://blog.dock.io/anonymous-credentials/">The World of Anonymous Credentials</a> Dock
+    <blockquote>
+      <p>A credential is called a verifiable credential when its authenticity can be cryptographically checked by anyone because the credential contains a cryptographic signature by the issuer, and the issuer’s public key is well known.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://drive.google.com/file/d/1BrFjh6-TVkJ4Rfllh5fUTjh6hkYtPbR_/view">25 Use Cases for Verifiable Credentials</a> LTO Network and Sphereon</li>
+  <li>
+<a href="https://www.youtube.com/watch?v%3DXxd56y2mhFQ">Verifiable Credentials For Travel &amp; Hospitality</a> Evernym
+    <blockquote>
+      <p>verifiable credentials and digital wallets can reduce fraud, automate workflows, and transform customer experiences across the travel and hospitality industries.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://credentialmaster.com/the-power-of-vcs/">The Power of Verifiable Credentials</a> Credential Master
+For the first time ever, data from one ecosystem can be instantly authenticated in any other, online or off, without a direct connection to the source.</li>
+  <li>
+<a href="https://lists.w3.org/Archives/Public/public-credentials/2021Jul/0109.html">Verifiable Credential Notarization and Third-Party Notary Services Providers: User Scenarios</a> Michael Herman 7/15</li>
+  <li>
+<a href="https://iiw.idcommons.net/10G/_Verifiable_Credentials_for_Authentic_Data_in_the_Supply_Chain">Verifiable Credentials for Authentic Data in the Supply Chain</a> by Gena Morgan, Kevin Dean
+    <blockquote>
+      <p>Using DiDs and VCs for verifiable product data in supply chains, leveraging the largest supply chain standard system in the world,</p>
+
+      <p>2.5 million users companies, over 6 billion product scans per day</p>
+
+      <p>Product data and attestations from a number of various authoritative sources</p>
+
+      <p>Leverage DIDs/VCs for distributed data sharing, verification</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://iiw.idcommons.net/21E/_Verifiable_Credentials_for_Assets_30_min">Verifiable Credentials for Assets &lt;30 min</a> by Mahmoud Alkhraishi
+    <blockquote>
+      <p>General Framework on how to think of VCs for Assets including leveraging GS1 and other vocabularies in the traceability vocab.</p>
+
+      <p>Requirements and Opportunities that block adoption of VCs in Supply chains</p>
+      <ul>
+        <li><a href="https://w3c-ccg.github.io/traceability-vocab/">Traceability Vocabulary v0.0</a></li>
+        <li><a href="https://w3c-ccg.github.io/vc-http-api">VC HTTP API (0.0.2-unstable)</a></li>
+        <li><a href="https://w3c-ccg.github.io/vc-status-list-2021/">Status List 2021</a></li>
+      </ul>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="user-experience">User Experience</h2>
+<ul>
+  <li>[Video] <a href="https://www.youtube.com/watch?v%3DkM30pd3w8qE%26list%3DPLU-rWqHm5p45dzXF2LJZjuNVJrOUR6DaD%26index%3D2">Using Paper-based Structured Credentials to Humanize Verifiable Credentials [Rough Cut]</a> Michael Herman (Trusted Digital Web) (Friday, 19 November)
+    <blockquote>
+      <p>User Scenario: ABC Grocery wants to use the Trusted Digital Web to issue a Purchase Order for 10 cabbages from David’s Cabbages.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://github.com/WebOfTrustInfo/rwot11-the-hague/blob/master/advance-readings/rendering-verifiable-credentials.md">Rendering Verifiable Credentials</a> Manu Sporny
+    <blockquote>
+      <p>This paper explores ways in which the Verifiable Credentials data model could be extended to support visual, audio, and physical renderings for Verifiable Credentials.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="critique">Critique</h2>
+
+<h3 id="thread-vcs-need-threat-modeling">Thread: VCs need Threat Modeling</h3>
+
+<ul>
+  <li>
+<a href="https://twitter.com/pamelarosiedee/status/1537233243086327812?s%3D20%26t%3DWWt14_H4AXgtn09xb5-yew">Thread started by Pamela Dingle</a>
+    <blockquote>
+      <p>Another pre-read recommendation for <a href="https://twitter.com/identiverse" class="user-mention">@identiverse</a>: the <a href="https://twitter.com/openid" class="user-mention">@openid</a> for Verifiable Credentials Whitepaper.  It is a great high level explanation of decentralized benefits and use cases, both <a href="https://twitter.com/kristinayasuda" class="user-mention">@kristinayasuda</a> &amp; <a href="https://twitter.com/tlodderstedt" class="user-mention">@tlodderstedt</a> contributed! OpenID for Verifiable Credentials</p>
+    </blockquote>
+    <ul>
+      <li>
+<a href="https://twitter.com/Erstejahre/status/1537615778106658816">Firstyear Replying to @Erstejahre @pamelarosiedee and 4 others</a>
+        <blockquote>
+          <p>It also seems to lack any sections about threat modelling and possible risks, making it hard to trust since risks are not directly and clearly addressed.</p>
+        </blockquote>
+      </li>
+      <li>
+<a href="https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics">Torsten Lodderstedt Replying to @Erstejahre @pamelarosiedee and 3 others</a>
+        <blockquote>
+          <p>I agree. We [threat] model while we are designing the protocol, we also need to add it to the spec. Please note: we build on existing work. There is an extensive thread model for OAuth and countermeasures that we built on (<a href="https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics">datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics</a>. Feel free to contribute.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+        
+      </section>
+      <footer class="page__meta">
+        <hr>
+        
+          <h3>Meta</h3>
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#claims-and-credentials-wg" class="page__taxonomy-item" rel="tag">Claims and Credentials WG</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#credentials-community-group" class="page__taxonomy-item" rel="tag">Credentials Community Group</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#fido" class="page__taxonomy-item" rel="tag">FIDO</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#json-ld" class="page__taxonomy-item" rel="tag">JSON-LD</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#oauth" class="page__taxonomy-item" rel="tag">OAuth</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#vc-wg" class="page__taxonomy-item" rel="tag">VC-WG</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#verifiable-credentials" class="page__taxonomy-item" rel="tag">Verifiable Credentials</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#w3c" class="page__taxonomy-item" rel="tag">W3C</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#web-standards" class="page__taxonomy-item" rel="tag">Web Standards</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-12-12">December 12, 2022</time></p>
+        
+        <h3><a href="https://github.com/Decentralized-ID/decentralized-id.github.io/blob/master/_posts/web-standards/w3c/working-groups/vc-wg/2020-01-10-verifiable-credentials.md" class="edit">Edit this page <i class="fa fa-pencil"></i></a></h3>
+        <h3>Social Share</h3>
+<a href="https://twitter.com/intent/tweet?via=infominer33&amp;text=Verifiable+Credentials%20https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Fw3c%2Fwg%2Fvc%2Fverifiable-credentials%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Fw3c%2Fwg%2Fvc%2Fverifiable-credentials%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Fw3c%2Fwg%2Fvc%2Fverifiable-credentials%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+<a href="https://www.reddit.com/submit?url=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Fw3c%2Fwg%2Fvc%2Fverifiable-credentials%2F&amp;title=Verifiable+Credentials" class="btn btn--reddit" title="Share on Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
+
+        <hr>        
+      </footer>
+    </div>
+    
+        <center>
+    <h3>Comments by <a href="https://staticman.net/">Staticman</a> and <a href="https://identosphere.net">Identosphere</a>
+</h3>
+    <iframe src="https://identosphere.substack.com/embed" width="400" height="267" style="border:1px solid #EEE; background:#f0f0f0;" frameborder="0" scrolling="yes"></iframe>
+  </center>
+  
+  <div class="page__comments">
+    
+      <section id="static-comments">
+        
+          <!-- Start static comments -->
+          <div class="js-comments">
+            
+          </div>
+          <!-- End static comments -->
+
+          <!-- Start new comment form -->
+          <div class="page__comments-form">
+            <h4 class="page__comments-title">Leave a Comment</h4>
+            <p class="small">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
+            <form id="new_comment" class="page__comments-form js-form form" method="post" action="https://tools.identosphere.net/staticman/v2/entry/Decentralized-ID/decentralized-id.github.io/master/comments">
+              <div class="form__spinner">
+                <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+              </div>
+
+              <div class="form-group">
+                <label for="comment-form-message">Comment <small class="required">*</small></label>
+                <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" tabindex="1"></textarea>
+                <div class="small help-block"><a href="https://daringfireball.net/projects/markdown/">Markdown is supported.</a></div>
+              </div>
+              <div class="form-group">
+                <label for="comment-form-name">Name <small class="required">*</small></label>
+                <input type="text" id="comment-form-name" name="fields[name]" tabindex="2">
+              </div>
+              <div class="form-group">
+                <label for="comment-form-email">Email address <small class="required">*</small></label>
+                <input type="email" id="comment-form-email" name="fields[email]" tabindex="3">
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <label for="comment-form-url">Website (optional)</label>
+                <input type="url" id="comment-form-url" name="fields[url]" tabindex="4">
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <input type="hidden" name="options[slug]" value="verifiable-credentials">
+                <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
+                <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off">
+                <input type="hidden" name="options[reCaptcha][siteKey]" value="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0">
+                <input type="hidden" name="options[reCaptcha][secret]" value="jG+tpXA7GdYSuIT/rcr5pyy9GG/ZP6808NE8SS+/ggGZ0Si0/uelJpZuElRrIITjfB7YjW6+MyWEBM/q/BFWQqRfkpCZ0RK5AETrx/awrvKSlCVCQfpN20MFpu54yFgkyj82umuoxOyiVczwUnkD8Sav0cXESbllHgC+2J2hw6nOYQ+ZnOFL4J4m3yoABhyGpKnhzw7enmaAm+pbxPXyLhjj9+LiRqGLWNUYOt+yOuo/i1aeE8p0lYwdESVoetkuNfKf1Q13Vs/KSPGceVXWLJAf7mDlwCf8wGrAZzCGAd9GQJM3KjliB+0hGOWs9X01+PdUr6ZeeGrAFjBERZXpTPdJmHDBmUNnX5Tdvhq9uU4I3NcZveIg5FyjLe4nMG30ha/hALW4KLvspzCL8nYWpFl27RTqN6v735xcBgcfVR4JPfInb91/EtAFe3gyM3BCe3enuiezGDZsqCn+glQZ7adeOrCaZ0pLG+FmL7WXR2QsSfq70biUp6uLZtGfJ4W9I9DIezbj3Z/ltJRFVTmWHGp3g4/2LAcsDLMfyR4QLVkcgqQjuAbYk3ItPNuLPAVV6mbHKvBmyoyimT1SpPWgu6uJCRkCyU90DMsBK/xNzhep9ljp73qV2B3qHvFqHIKKzYEoA2rtQexTsRWxf+20axauwWO/DdpcOqOQC8mUqBE=">
+              </div>
+              <!-- Start comment form alert messaging -->
+              <p class="hidden js-notice">
+                <strong class="js-notice-text"></strong>
+              </p>
+              <!-- End comment form alert messaging -->
+              
+                <div class="form-group">
+                  <div class="g-recaptcha" data-sitekey="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0"></div>
+                </div>
+              
+              <div class="form-group">
+                <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--primary btn--large">Submit comment</button>
+              </div>
+            </form>
+          </div>
+          <!-- End new comment form -->
+          <script async src="https://www.google.com/recaptcha/api.js"></script>
+        
+      </section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    
+    
+      
+      
+          
+            
+              <div class="page__related">
+                
+                  <h4 class="page__related-title">See Also</h4>
+                
+                <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/did-square.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/object-capabilities/" rel="permalink">Object Capability Model
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">Computer scientist E. Dean Tribble stated that in smart contracts, identity-based access control did not support well dynamically changing permissions, compared to the object-capability model. He analogized the ocap model with giving a valet the key to one’s car, without handing over the right to...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2021-04-19 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+
+    
+      
+      
+        <div class="tags">Cosmos</div> 
+      
+        <div class="tags">JSON-LD</div> 
+      
+        <div class="tags">oCap</div> 
+      
+        <div class="tags">zCap</div> 
+      <br>
+    <hr>
+  </article> 
+</div>
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/dataweb/dataweb-whitepaper-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/literature/dataweb-introduction-to-xdi/" rel="permalink">The Dataweb: An Introduction to XDI
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The goal of XDI is to enable data from any data source to be identified, exchanged, linked, and synchronized into a machine-readable dataweb using XML documents just as content from any content source can linked into the human-readable Web using HTML documents today. Because the controls needed t...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-09 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  42 minute read
+</p>
+
+    
+      
+      
+        <div class="tags">Dataweb</div> 
+      
+        <div class="tags">XDI</div> 
+      
+        <div class="tags">XRI</div> 
+      <br>
+    <hr>
+  </article> 
+</div>
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/xdi-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/oasis-open/xdi/xri-tc/" rel="permalink">XDI Technical Committee
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The purpose of the OASIS XDI TC is to define a generalized, extensible, location-, application-, and transport-independent service for sharing, linking, and synchronizing data over the Internet and other data networks using XML documents and XRIs (Extensible Resource Identifiers), a URI-compatibl...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-01 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+</p>
+
+    
+      
+      
+        <div class="tags">Dataweb</div> 
+      
+        <div class="tags">OASIS</div> 
+      
+        <div class="tags">RDF</div> 
+      
+        <div class="tags">XDI</div> 
+      
+        <div class="tags">XRI</div> 
+      <br>
+    <hr>
+  </article> 
+</div>
+            
+            
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/xri-tc-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/oasis-open/xdi/xdi-tc/" rel="permalink">XRI Technical Committee
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The purpose of this TC is to define a syntax for abstract structured identifiers – identifiers that can be used within other URI schemes (such as http: and https: URIs) to share semantics across any number of domains and applications. The TC is also defining a simple XML descriptor format and HTT...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-01 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  7 minute read
+</p>
+
+    
+      
+      
+        <div class="tags">Dataweb</div> 
+      
+        <div class="tags">OASIS</div> 
+      
+        <div class="tags">XDI</div> 
+      
+        <div class="tags">XRI</div> 
+      <br>
+    <hr>
+  </article> 
+</div>
+            
+            
+      
+    
+        </div>
+      </div>
+    
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+  <!-- start custom analytics snippet -->
+
+
+
+
+<!-- end custom analytics snippet -->
+
+
+
+
+
+    
+  <script>
+    (function ($) {
+    $('#new_comment').submit(function () {
+      var form = this;
+
+      $(form).addClass('disabled');
+      $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i> Loading...');
+
+      $.ajax({
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        contentType: 'application/x-www-form-urlencoded',
+        success: function (data) {
+          $('#comment-form-submit').html('Submitted');
+          $('.page__comments-form .js-notice').removeClass('notice--danger');
+          $('.page__comments-form .js-notice').addClass('notice--success');
+          showAlert('Thanks for your comment! It will show on the site once it has been approved.');
+        },
+        error: function (err) {
+          console.log(err);
+          $('#comment-form-submit').html('Submit comment');
+          $('.page__comments-form .js-notice').removeClass('notice--success');
+          $('.page__comments-form .js-notice').addClass('notice--danger');
+          showAlert('Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.');
+          $(form).removeClass('disabled');
+        }
+      });
+
+      return false;
+    });
+
+    function showAlert(message) {
+      $('.page__comments-form .js-notice').removeClass('hidden');
+      $('.page__comments-form .js-notice-text').html(message);
+    }
+  })(jQuery);
+  </script>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,628 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>OpenID Connect |  Decentralized Identity Web Directory</title>
+<meta name="description" content="Learning to create an Identity Layer for the Internet, that is vendor agnostic and as widely interoperable, as possible, putting users in control of their personal information.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="OpenID Connect">
+<meta property="og:url" content="https://decentralized-id.com/identosphere-dump/open-standards/exchange-protocol/oidc/">
+
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/did-twitter.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="OpenID Connect">
+  <meta name="twitter:description" content="Learning to create an Identity Layer for the Internet, that is vendor agnostic and as widely interoperable, as possible, putting users in control of their personal information.">
+  <meta name="twitter:url" content="https://decentralized-id.com/identosphere-dump/open-standards/exchange-protocol/oidc/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://decentralized-id.com/images/did-twitter.webp">
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/identosphere-dump/open-standards/exchange-protocol/oidc/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--page">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/about/">Welcome</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/introduction/">Introduction</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/posts/">Recent</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/aim/">Aim</a>
+            </li>
+</ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <h1 id="openid-connect">OpenID Connect</h1>
+
+<ul>
+  <li><a href="https://openid.net/2022/07/05/public-review-period-for-proposed-final-openid-connect-logout-specifications/">Public Review Period for Proposed Final OpenID Connect Logout</a></li>
+</ul>
+
+<p>Unless issues are identified during the review that the working group believes must be addressed by revising the drafts, this review period will be followed by a seven-day voting period during which OpenID Foundation members will vote on whether to approve these drafts as OpenID Final Specifications.</p>
+
+<ul>
+  <li>
+<a href="https://iiw.idcommons.net/24B/_More_Killer_Whale_Jello_Salad...figuring_out_how_credential_exchange_can_harmonize.">More Killer Whale Jello Salad…figuring out how credential exchange can harmonize.</a> by Kaliya Young et al.
+    <blockquote>
+      <ul>
+        <li>
+          <table>
+            <tbody>
+              <tr>
+                <td>Because what we need is interoperable - issuance - issue-&gt; holder</td>
+                <td> </td>
+                <td>holder -&gt; verifier some conversation about SIOP - has not been the focus of the discussion.</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+        <li>Goal to create a bridge between</li>
+        <li>the W3C CCG / DHS SVIP - VCI-HTTP-API (VHA) in combination with CHAPI protocol and the (VC Request) for issuing credentials.</li>
+        <li>Aries protocols run on top of DIDComm</li>
+        <li>If we agree on a credential format we can exchange across those universes - JSON-LD ZKP BBS+ then we need a protocol to do it - can go between.</li>
+        <li>Orie proposed - that we rather then extend VHA - that the we take a streamlined path with DIDComm as envelop layer - present proof - presentation exchange as a payload including the DIF work presentation, Aries and hopefully alternative to expanding VHA - for holder interactions - since it doesn’t have a holder interactions leverage existing</li>
+        <li>So can be tested with next SVIP - testing.</li>
+        <li>Presentation Exchange and use of DIDComm and for sake of interop testing pave a narrow path - and expand in future interoperability efforts.</li>
+        <li>Summary: DIDComm, Presentation request, presentation exchange, present proof format using JSON-LD ZKP with BBS+</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li><a href="https://self-issued.info/?p=2167">OpenID Connect Presentation at IIW XXXII</a></li>
+  <li><a href="https://openid.net/connect/">OpenID Connect</a></li>
+  <li><a href="https://openid.net/connect/faq/">Frequently Asked Questions</a></li>
+  <li><a href="https://lists.openid.net/mailman/listinfo/openid-specs-ab">Working Group Mailing List</a></li>
+  <li><a href="https://openid.net/certification/">OpenID Certification Program</a></li>
+  <li><a href="https://openid.net/developers/certified/">Certified OpenID Connect Implementations Featured for Developers</a></li>
+  <li>
+<a href="https://blog.codeb.io/use-codeb-ssi-as-oidc-identity-provider-for-wordpress/">Use CodeB SSI as OpenID Connect Identity Provider for WordPress</a> CodeB</li>
+</ul>
+
+<p>The Self-Sovereign Identity System of CodeB does not only support W3C DID’s but comes also with an inbuilt OpenID Connect (OIDC) Identity Provider. <a href="https://www.codeb.io/openid-connect-meets-distributed-self-sovereign-identities/">OpenID Connect meets distributed Self-Sovereign Identities.</a></p>
+<ul>
+  <li><a href="https://blog.spruceid.com/spruce-developer-update-20/">Spruce Developer Update #20</a></li>
+</ul>
+
+<p>We’ve set up a <a href="https://github.com/spruceid/ens-oidc/">release pipeline</a> and had our first witnessed deployment for the ENS Community-Maintained OIDC IdP (<a href="https://blog.spruceid.com/sign-in-with-ethereum-decentralizing-an-identity-provider-server/">more info here</a></p>
+<ul>
+  <li>
+<a href="https://iiw.idcommons.net/12G/_Use-cases:_OIDC_for_Verifiable_Credentials_-_How_do_you_want_to_use_Identity_Provider_you_control%3F">Use-cases: OIDC for Verifiable Credentials - How do you want to use Identity Provider you control?</a> by Oliver Terbu, Torsten Lodderstedt, Kristina Yasuda, Adam Lemmon, Tobias Looker</li>
+  <li>
+<a href="https://iiw.idcommons.net/13L/_Browser_APIs_to_enable_OpenID_Session_Management_and_Privacy">Browser APIs to enable OpenID Session Management and Privacy</a> by Sam Goto</li>
+</ul>
+
+<p>How does logout in OIDC happen?</p>
+
+<ul>
+  <li>Classification problem - browsers do not know it is a logout now</li>
+  <li>Easiest way</li>
+  <li>Browser asks for a user consent</li>
+  <li>Hard from a permission implementation perspective</li>
+  <li>Tim: No issues with this idea</li>
+  <li>If user logged into several OPs, user will not look to all the ones they log out from</li>
+  <li>Option2</li>
+  <li>Browser classifies signing-in event</li>
+  <li>On log out does not prompt the user and IdP has no incentives to lie</li>
+  <li>RPs get to determine if they want to log the user out or not</li>
+  <li>Whether you can swap generic frame with fenced frame, frame can see it’s own cookies</li>
+  <li>May not be able to pass any parameters that you need to pass; no link decoration for framed frame</li>
+  <li>Subdomains also considered, but not well thought out</li>
+  <li>Logout URL - other option to add, but more work for RP: Resource metadata. Specification - not much adoption. It just feels like a place where RP metadata could be declared which could be useful in this context of the RP defining its metadata (e.g. what IDP it uses</li>
+  <li><a href="https://tools.ietf.org/html/draft-jones-oauth-resource-metadata-01">draft-jones-oauth-resource-metadata-01 - OAuth 2.0 Protected Resource Metadata (ietf.org)</a></li>
+  <li>On digression: <a href="https://cloudidentity.com/blog/wp-content/uploads/2013/01/3252.image_5F00_04277494.png">https://cloudidentity.com/blog/wp-content/uploads/2013/01/3252.image_5F00_04277494.png</a>
+</li>
+  <li>Messy real-life situation - sign in to AAD with OIDC and WS-fed; register something at sign-in. From a user, same account, does not matter which protocol is used</li>
+  <li>What needs more to be discussed what log out means to the user</li>
+  <li>User does not understand when they log out from office, they also log out from Azure</li>
+  <li>Also a developer choice</li>
+  <li>Relevant one, but not much browsers can do about</li>
+  <li>If a bigger picture is browser wants to be in the middle, browser can do something in this area too.</li>
+  <li>Ugly part of logout - mechanisms to allow the range of services</li>
+  <li>IdP does not need to send back list of all RPs user is logging out from</li>
+  <li>Idea not entirely off for IdP to tell a browser from there it wants to log user out from</li>
+  <li>Browser have confident of the user intent</li>
+  <li>Prompt the user for the intent - never a good idea</li>
+  <li>Logout API that community can control a behaviour of</li>
+  <li>You call it, browser logs it, and tell where the user left of</li>
+  <li>Browser observes the login - passively. Heuristics - what if the browser has not seen it..</li>
+  <li>some of this is already starting to show up in chrome canarie</li>
+  <li><a href="https://chromium-review.googlesource.com/c/chromium/src/+/2837551">https://chromium-review.googlesource.com/c/chromium/src/+/2837551</a></li>
+  <li>
+    <p>If domain name ETLD of the issuer is the same as IdP, automatically logs out</p>
+  </li>
+  <li>
+    <p>[…]</p>
+  </li>
+  <li>Looks like we can preserve session management if we figure out logout</li>
+  <li>Next would be good to see pseudo code with concrete scenario and sequence diagrams</li>
+  <li>Pseudo text: <a href="https://github.com/WICG/WebID/blob/main/cookies.md#logout">https://github.com/WICG/WebID/blob/main/cookies.md#logout</a>
+</li>
+  <li>Prototype is being built</li>
+  <li>AOB? At IIW?</li>
+  <li>Understand what third party cookies actually mean - no cookies at all? Partition cookies going away. The way firefox is doing it?</li>
+  <li>
+<a href="https://twitter.com/kimdhamilton">@kimdhamilton</a> · <a href="https://twitter.com/kimdhamilton/status/1397241823190523904">May 25</a>
+</li>
+</ul>
+
+<p>I’ve read every decentralized identity protocol so you don’t have to. They all just read like “nothing to see here, just f- right off” Oh, except for OIDC Credential Provider. Well done to them!</p>
+
+<ul>
+  <li>
+<a href="https://pranavkirtani.medium.com/how-a-combination-of-federated-identity-and-verifiable-credentials-can-help-with-customer-7e6518feb018">How a combination of Federated identity and Verifiable Credentials can help with Customer onboarding</a> Pranav Kirtani</li>
+</ul>
+
+<p>Before we dive into how Federated systems like OIDC and SAML along with Verifiable Credentials (VC) can help improve customer onboarding to your application, let us first understand what are the current methods being used for onboarding.</p>
+<ul>
+  <li>
+    <p><a href="https://vimeo.com/630104529">OIDC with SIOPv2 and DIF Presentation Exchange</a> Sphereon</p>
+  </li>
+  <li>
+    <p><a href="https://openid.net/2021/12/17/first-public-review-period-for-openid-connect-siopv2-and-oidc4vp-specifications-started/">First Public Review Period for OpenID Connect SIOPV2 and OIDC4VP Specifications Started</a> OpenID</p>
+  </li>
+  <li>Implementer’s Drafts public review period: Friday, December 17, 2021 to Monday, January 31, 2022 (45 days)</li>
+  <li>Implementer’s Drafts vote announcement: Tuesday, January 18, 2022</li>
+  <li>
+    <p>Implementer’s Drafts voting period: Tuesday, February 1, 2022 to Tuesday, February 8, 2022 *</p>
+  </li>
+  <li>
+    <p><a href="https://openid.net/2022/02/08/first-implementers-drafts-of-openid-connect-siopv2-and-oidc4vp-specifications-approved/">​​First Implementer’s Drafts of OpenID Connect SIOPV2 and OIDC4VP Specifications Approved</a> OpenID</p>
+  </li>
+  <li>
+<a href="https://openid.net/2022/01/18/notice-of-vote-for-first-implementers-drafts-of-openid-connect-siopv2-and-oidc4vp-specifications/">Vote for First Implementer’s Drafts of OIDConnect SIOPV2 and OIDC4VP Specifications</a> OpenID</li>
+</ul>
+
+<p>The official voting period will be between Tuesday, February 1, 2022 and Tuesday, February 8, 2022, following the <a href="https://openid.net/2021/12/17/first-public-review-period-for-openid-connect-siopv2-and-oidc4vp-specifications-started/">45-day review</a> of the specifications.</p>
+<ul>
+  <li>
+<a href="https://www.ubisecure.com/education/differences-between-saml-oauth-openid-connect/">Differences between SAML, OAuth &amp; OIDC (OpenID Connect)</a>
+    <blockquote>
+      <p>SAML 2.0 - Security Assertion Markup Language</p>
+
+      <p>OAuth 2.0 - Web Authorization Protocol
+OpenID Connect 1.0 (OIDC) - Simple identity layer on top of OAuth 2.0</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><a href="https://self-issued.info/?p=2214">OpenID Presentations at December 2021 OpenID Virtual Workshop</a></p>
+  </li>
+  <li>OpenID Connect Working Group <a href="http://self-issued.info/presentations/OpenID_Connect_Working_Group_9-Dec-21.pptx">(PowerPoint)</a> <a href="http://self-issued.info/presentations/OpenID_Connect_Working_Group_9-Dec-21.pdf">(PDF)</a>
+</li>
+  <li>OpenID Enhanced Authentication Profile (EAP) Working Group <a href="http://self-issued.info/presentations/OpenID_EAP_Working_Group_9-Dec-21.pptx">(PowerPoint)</a> <a href="http://self-issued.info/presentations/OpenID_EAP_Working_Group_9-Dec-21.pdf">(PDF)</a>
+</li>
+</ul>
+
+<p>use of IETF Token Binding specifications with OpenID Connect and integration with FIDO relying parties and/or other strong authentication technologies.”</p>
+
+<ul>
+  <li>
+<a href="https://medium.com/decentralized-identity/dif-oidf-9753b9bd0093">DIF and OIDF cooperation</a>
+    <blockquote>
+      <p>to work together on areas of mutual interest, allowing working groups to align and coordinate through dual-members. The first major collaboration, which has already been underway for weeks, is a process for revising the Self-Issued OpenID Connect (SIOP) chapter of the OpenID Connect (OIDC) specification.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://openid.net/2021/09/01/openid-connect-client-initiated-backchannel-authentication-ciba-core-is-now-a-final-specification/">OpenID Connect Client-Initiated Backchannel Authentication (CIBA) Core is now a Final Specification</a></li>
+</ul>
+
+<p>The OpenID Foundation membership has approved the following <a href="https://openid.net/wg/mobile/">MODRNA</a> specification as an OpenID Final Specification:</p>
+<ul>
+  <li><a href="https://self-issued.info/?p=2187">OpenID Connect Presentation at 2021 European Identity and Cloud (EIC) Conference</a></li>
+</ul>
+
+<p>I gave the following presentation on the <a href="https://openid.net/wg/connect/">OpenID Connect Working Group</a> during the <a href="https://openid.net/oidf-workshop-at-eic-2021-monday-september-13-2021/">September 13, 2021 OpenID Workshop</a> at the <a href="https://www.kuppingercole.com/events/eic2021/">2021 European Identity and Cloud (EIC) conference</a>. As I noted during the talk, this is an exciting time for OpenID Connect; there’s more happening now than at any time since the original OpenID Connect specs were created!</p>
+
+<ul>
+  <li>
+    <p>OpenID Connect Working Group <a href="http://self-issued.info/presentations/OpenID_Connect_Working_Group_13-Sep-21.pptx">(PowerPoint)</a> <a href="http://self-issued.info/presentations/OpenID_Connect_Working_Group_13-Sep-21.pdf">(PDF)</a></p>
+  </li>
+  <li>
+    <p><a href="https://vimeo.com/630104529">OIDC with SIOPv2 and DIF Presentation Exchange</a> Sphereon</p>
+  </li>
+  <li>
+    <p><a href="https://self-issued.info/?p=2196">OpenID Connect Presentation at IIW XXXIII</a> Mike Jones</p>
+  </li>
+  <li>
+    <p>Introduction to OpenID Connect <a href="https://self-issued.info/presentations/OpenID_Connect_Introduction_12-Oct-21.pptx">(PowerPoint)</a> <a href="https://self-issued.info/presentations/OpenID_Connect_Introduction_12-Oct-21.pdf">(PDF)</a></p>
+  </li>
+</ul>
+
+<p>The session was well attended. There was a good discussion about the use of passwordless authentication with OpenID Connect.</p>
+
+<ul>
+  <li>
+    <p><a href="https://openid.net/2022/02/08/first-implementers-drafts-of-openid-connect-siopv2-and-oidc4vp-specifications-approved/">​​First Implementer’s Drafts of OpenID Connect SIOPV2 and OIDC4VP Specifications Approved</a> OpenID</p>
+  </li>
+  <li><a href="https://openid.net/specs/openid-connect-self-issued-v2-1_0-07.html">Self-Issued OpenID Provider v2</a></li>
+  <li><a href="https://openid.net/specs/openid-connect-4-verifiable-presentations-1_0-08.html">OpenID Connect for Verifiable Presentations</a></li>
+  <li>
+<a href="https://nat.sakimura.org/2021/09/14/announcing-gain/">Nat describes GAIN</a> as an overlay network on top of the Internet with all its participants identity proofed. One key benefit of the approach proposed in the white paper is that the standards required to enable this network already exist: OpenID Connect and eKYC/IDA.</li>
+  <li><a href="https://openid.net/specs/openid-client-initiated-backchannel-authentication-core-1_0.html">OpenID Connect Client-Initiated Backchannel Authentication Flow – Core 1.0</a></li>
+</ul>
+
+<p>A Final Specification provides intellectual property protections to implementers of the specification and is not subject to further revision.</p>
+<ul>
+  <li>
+<a href="https://self-issued.info/presentations/OpenID_Connect_Introduction_20-Oct-20.pdf">Intro to OpenID Connect at IIW XXXI</a>.
+It is a great overview of the key design principles of OpenID and how we got to now with the protocol</li>
+  <li>
+<a href="https://auth0.com/blog/identity-unlocked-explained-season-2-ep-5/">Identity, Unlocked… SIOP with Kristina Yasuda</a>
+    <blockquote>
+      <p>As a discovery mechanism to invoke a Self-Issued OP, the discussion on the podcast covered the usage of a custom schema ‘openid://’. Alternative mechanisms to address the limitations of custom schemas are being actively explored in the WG.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>The conversation meanders through deeper details, from how the current <a href="https://bitbucket.org/openid/connect/src/master/openid-connect-self-issued-v2-1_0.md">SIOP specification draft</a> under the OpenID Foundation picks up the mission from a <a href="https://identity.foundation/did-siop/">former attempt under DIF</a> to encoding approaches for verifiable presentations (embedding in JWTs, <a href="https://w3c-ccg.github.io/ld-proofs/">LD proofs</a>, how to represent attributes</p>
+<ul>
+  <li>
+<a href="https://www.chakray.com/era-self-sovereign-identity/">The Era of Self-Sovereign Identity</a> Chakaray</li>
+</ul>
+
+<p>VC-AuthN OIDC uses the OpenID connect standards to easily integrate with the supported systems and also provides a way to authenticate using the verifiable credentials, giving the control back to the user. This is similar to the traditional OpenID connect, the only difference is in the token information. Rather than using the user’s information to construct the token, this uses claims in the verifiable credentials presented by the user.</p>
+<ul>
+  <li><a href="https://www.ubisecure.com/podcast/openid-connect/">Let’s talk about digital identity with Oscar Santolalla, Nat Sakimura and Petteri Stenius</a></li>
+</ul>
+
+<p>the history of OpenID Connect and how it became so prevalent, with special guests <a href="https://www.linkedin.com/in/natsakimura/">Nat Sakimura</a>, Chairman at the OpenID Foundation, and <a href="https://www.linkedin.com/in/petteri-stenius-6a637/">Petteri Stenius</a>, Principal Scientist at Ubisecure. […]</p>
+
+<p>“New technology seldomly completely replaces the older technologies. They will form additional layers, and slowly start replacing it.”</p>
+<ul>
+  <li>
+<a href="https://iiw.idcommons.net/1B/_101_Session:_OpenID_Connect">101 Session: OpenID Connect</a> by Mike Jones</li>
+</ul>
+
+<p>Described at: <a href="https://openid.net/connect/">https://openid.net/connect/</a></p>
+<ul>
+  <li>
+    <p><a href="https://iiw.idcommons.net/5B/_OpenID_Connect_Claims_Aggregation">OpenID Connect Claims Aggregation</a> by Nat Sakimura, Edmund Jay, Kristina Yasuda
+<a href="https://docs.google.com/presentation/d/1w-rmwZoLiFWczJ4chXuxhY0OsgHQmlIimS2TNlce4UU/edit?usp=sharing">2021-04-21_OpenID Connect Claims Aggregation</a></p>
+  </li>
+  <li>
+<a href="https://iiw.idcommons.net/10J/_OpenID_Connect_4_Identity_Assurance">OpenID Connect 4 Identity Assurance</a> by Torsten Lodderstedt
+    <blockquote>
+      <p><a href="https://www.slideshare.net/TorstenLodderstedt/openid-connect-4-identity-assurance-at-iiw-32">https://www.slideshare.net/TorstenLodderstedt/openid-connect-4-identity-assurance-at-iiw-32</a></p>
+
+      <p>Jacob Dilles proposed to allow RPs to use handles for pre-configured eKYC requests. I filled an issue for discussion by the WG (<a href="https://bitbucket.org/openid/ekyc-ida/issues/1245/pre-configured-claims-ekyc-requests">https://bitbucket.org/openid/ekyc-ida/issues/1245/pre-configured-claims-ekyc-requests</a>.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://iiw.idcommons.net/11M/_OpenID_Connect:_Session_Management_vs_Privacy">OpenID Connect: Session Management vs Privacy</a> by David Waite</li>
+</ul>
+
+<p>To recap:</p>
+
+<ul>
+  <li>Front-channel logout is simple</li>
+  <li>…but brittle and doesn’t give good security guarantees</li>
+  <li>Back-channel logout is robust</li>
+  <li>…but difficult to implement/support, can still miss signals</li>
+  <li>Session Management is useful for some apps</li>
+  <li>…but is broken in many browsers</li>
+</ul>
+
+<p>On their own independent schedules, all browsers have either broken or have plans to break state sharing via cross-site iframes to limit user tracking - arguably making the Session Management approach unusable.</p>
+
+<ul>
+  <li><a href="https://self-issued.info/?p=2298">The OpenID Connect Logout specifications are now Final Specifications</a></li>
+</ul>
+
+<p>The OpenID Connect Logout specifications are now Final Specifications</p>
+
+<p>Thanks to all who helped us reach this important milestone! This was originally <a href="https://openid.net/2022/09/12/the-openid-connect-logout-specifications-are-now-final-specifications/">announced on the OpenID blog</a>.</p>
+
+<ul>
+  <li>
+<a href="https://iiw.idcommons.net/2F/_OpenID_Connect_for_W3C_Verifiable_Credential_Objects">OpenID Connect for W3C Verifiable Credential Objects</a> by Oliver Terbu, Torsten Lodderstedt, Kristina Yasuda, Adam Lemmon, Tobias Looker</li>
+</ul>
+
+<p>Slides: <a href="https://www.slideshare.net/TorstenLodderstedt/openid-connect-for-w3c-verifiable-credential-objects">https://www.slideshare.net/TorstenLodderstedt/openid-connect-for-w3c-verifiable-credential-objects</a></p>
+
+<ul>
+  <li>Have been incubated in OpenID Foundation and DIF’s joint Self-Issued OpenID Provider WG - contact Kristina (<a href="mailto:kristina.yasuda@microsoft.com">kristina.yasuda@microsoft.com</a> for participation details)</li>
+  <li>
+    <p><a href="https://openid.net/2021/12/17/first-public-review-period-for-openid-connect-siopv2-and-oidc4vp-specifications-started/">First Public Review Period for OpenID Connect SIOPV2 and OIDC4VP Specifications Started</a> OpenID</p>
+  </li>
+  <li>Implementer’s Drafts public review period: Friday, December 17, 2021 to Monday, January 31, 2022 (45 days)</li>
+  <li>Implementer’s Drafts vote announcement: Tuesday, January 18, 2022</li>
+  <li>
+    <p>Implementer’s Drafts voting period: Tuesday, February 1, 2022 to Tuesday, February 8, 2022 *</p>
+  </li>
+  <li>
+<a href="https://www.ubisecure.com/education/differences-between-saml-oauth-openid-connect/">Differences between SAML, OAuth &amp; OIDC (OpenID Connect)</a>
+    <blockquote>
+      <p>SAML 2.0 - Security Assertion Markup Language</p>
+
+      <p>OAuth 2.0 - Web Authorization Protocol
+OpenID Connect 1.0 (OIDC) - Simple identity layer on top of OAuth 2.0</p>
+    </blockquote>
+  </li>
+  <li>OpenID: <a href="https://openid.net/2021/06/07/public-review-period-for-proposed-final-openid-connect-client-initiated-backchannel-authentication-ciba-core-specification/">Public Review Period for Proposed Final OpenID Connect Client-Initiated Backchannel Authentication (CIBA) Core Specification</a>
+</li>
+  <li>
+<a href="https://identiverse.gallery.video/detail/videos/standards/video/6184823227001/distributed-open-identity:-self-sovereign-openid:-a-status-report?autoStart=true">Distributed Open Identity: Self-Sovereign OpenID: A Status Report</a>
+    <blockquote>
+      <p>follow up of the Identiverse 2019 session “SSO: Self-sovereign OpenID Connect – a ToDo list”. (Decentralized Identity, Mobile, Verified Claims &amp; Credentials, Standards, Preeti Rastogi, Nat Sakimura)</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.youtube.com/watch?v=9DExNTY3QAk">Personal Digital Transformation and Holistic Digital Identity</a> OpenID Japan ← His last public talk</li>
+</ul>
+
+<p>from the OpenID Summit Tokyo 2020 Keynote […] about Claims, Identity, Self-ness, Who-ness, and OpenID Connect and Decentralized Identity.</p>
+
+<ul>
+  <li>
+    <p><a href="https://docs.google.com/presentation/d/1a0C4HvVYwwwDqSw3tgPNhy9Iqyufy9oZdnMgl7rQ9Vc/edit#slide=id.p">SIOP Use-cases - IIW Spring 2021</a></p>
+  </li>
+  <li>Continuity of a service</li>
+  <li>Offline Authentication</li>
+  <li>Speed, reduced latency</li>
+  <li>Choice, Portability</li>
+  <li>Privacy</li>
+  <li>
+    <p><a href="https://iiw.idcommons.net/20A/_DID_chooser_for_SIOP">DID chooser for SIOP</a> by tom jones &amp; friends</p>
+  </li>
+  <li><a href="https://docs.google.com/presentation/d/1OaMecHecTUexv1skJZoYzJoHKYH8H03REFpFstLRjPg/edit?ts=607b7e5d#slide=id.gd2c45a9dcd_7_21">https://docs.google.com/presentation/d/1OaMecHecTUexv1skJZoYzJoHKYH8H03REFpFstLRjPg/edit?ts=607b7e5d#slide=id.gd2c45a9dcd_7_21</a></li>
+</ul>
+
+<p>Goal is to allow folks to pick their DID they want to use for a website.
+“Subject choosing which DID to present”.</p>
+
+<p>Use case:
+A user goes to an RP, and decides to register for return visits.
+RP can’t offer folks the Nascar Problem (too many IDP logos on the login screen).</p>
+
+<p>Select a Wallet vs Select a Wallet and Identifier.</p>
+
+<p>What happens when SIOP arrives?
+We will need a DID chooser.</p>
+
+<p>Some wallets will hold credentials for multiple identifiers, some will hold only 1.</p>
+
+<p>An RP offers users multiple options for registration (Google, Facebook, Yahoo…. And coming soon… Personal)</p>
+
+<p>RP should disclose their ID and why they are asking the user for what data.</p>
+
+<p>Options we consider:</p>
+
+<ul>
+  <li><a href="https://w3c-ccg.github.io/credential-handler-api/">https://w3c-ccg.github.io/credential-handler-api/</a></li>
+  <li><a href="https://w3c-ccg.github.io/vp-request-spec/#format">https://w3c-ccg.github.io/vp-request-spec/#format</a></li>
+  <li><a href="https://specs.bloom.co/wallet-and-credential-interactions/">https://specs.bloom.co/wallet-and-credential-interactions/</a></li>
+  <li><a href="https://github.com/w3c-ccg/universal-wallet-interop-spec/issues/84">https://github.com/w3c-ccg/universal-wallet-interop-spec/issues/84</a></li>
+  <li><a href="http://news.windley.com/issues/using-openid4vc-for-credential-exchange-technometria-issue-62-1374264?via=twitter-card&amp;client=DesktopWeb&amp;element=issue-card">Using OpenID4VC for Credential Exchange; Technometria - Issue #62</a></li>
+</ul>
+
+<p>Extending OAuth and OIDC to support the issuance and presentation of verifiable credentials provides for richer interactions than merely supporting authentication. All the use cases we’ve identified for verifiable credentials are available in OpenID4VC as well.</p>
+
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+  <!-- start custom analytics snippet -->
+
+
+
+
+<!-- end custom analytics snippet -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

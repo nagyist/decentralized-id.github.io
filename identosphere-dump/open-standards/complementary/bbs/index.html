@@ -1,0 +1,368 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>BBS |  Decentralized Identity Web Directory</title>
+<meta name="description" content="Learning to create an Identity Layer for the Internet, that is vendor agnostic and as widely interoperable, as possible, putting users in control of their personal information.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="BBS">
+<meta property="og:url" content="https://decentralized-id.com/identosphere-dump/open-standards/complementary/bbs/">
+
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/did-twitter.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="BBS">
+  <meta name="twitter:description" content="Learning to create an Identity Layer for the Internet, that is vendor agnostic and as widely interoperable, as possible, putting users in control of their personal information.">
+  <meta name="twitter:url" content="https://decentralized-id.com/identosphere-dump/open-standards/complementary/bbs/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://decentralized-id.com/images/did-twitter.webp">
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/identosphere-dump/open-standards/complementary/bbs/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--page">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/about/">Welcome</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/introduction/">Introduction</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/posts/">Recent</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/aim/">Aim</a>
+            </li>
+</ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <h1 id="bbs">BBS</h1>
+
+<ul>
+  <li>
+    <p><a href="https://iiw.idcommons.net/13B/_What%27s_next_for_BBS+_LD-Proofs%3F">What’s next for BBS+ LD-Proofs?</a> by Brent Zundel</p>
+  </li>
+  <li>
+    <p><a href="https://w3c-ccg.github.io/ldp-bbs2020/">BBS+ Signatures 2020</a></p>
+  </li>
+  <li>What’s next for BBS+ LD-Proofs?</li>
+  <li>Implementation in Aries (<a href="https://iiw.animo.id/">https://iiw.animo.id/</a>, Used in SVIP Plugfest</li>
+  <li>Implementation of BBS+ in Ursa, Core of higher level implementations</li>
+  <li>Features</li>
+  <li>Selective Disclosure</li>
+  <li>Signature blinding</li>
+  <li>Blinded messages (private holder binding)</li>
+  <li>BBS+ LD Proofs uses this BBS+ scheme, MATTR provided spec</li>
+  <li>Combine privacy features with semantic world</li>
+  <li>Draft spec: <a href="https://github.com/w3c-ccg/ldp-bbs2020/">https://github.com/w3c-ccg/ldp-bbs2020/</a>
+</li>
+  <li>What needs to be refined?</li>
+  <li>Private holder binding (<a href="https://github.com/w3c-ccg/ldp-bbs2020/issues/37">https://github.com/w3c-ccg/ldp-bbs2020/issues/37</a>
+</li>
+  <li>Do not bind to link secret, bind to keypair. Make keypair per credential</li>
+  <li>How to participate?</li>
+  <li>Read the draft BBS+ LD-Proofs spec</li>
+  <li>Hardware security binding?</li>
+  <li>Not possible with BLS yet?</li>
+  <li>Is post-quantum secure?</li>
+  <li>No. Pairing-based signatures are not post-quantum secure</li>
+</ul>
+
+<p>Next steps:</p>
+
+<ul>
+  <li>PRs for Issues 10 and 37 plus editorial pass to wrap up ldp-bbs2020</li>
+  <li>Brent will do PR for 37 <a href="https://github.com/w3c-ccg/ldp-bbs2020/issues/37">https://github.com/w3c-ccg/ldp-bbs2020/issues/37</a>,</li>
+  <li>Timo will do PR for 10 <a href="https://github.com/w3c-ccg/ldp-bbs2020/issues/10">https://github.com/w3c-ccg/ldp-bbs2020/issues/10</a>.</li>
+  <li>Invite everyone to suggest editorial changes</li>
+  <li>Create WG at DIF for Crypto - first work item BBS+</li>
+  <li>Tobias will work with Rouven to get that started, <a href="https://github.com/decentralized-identity/org/blob/master/working-group-lifecycle.md">https://github.com/decentralized-identity/org/blob/master/working-group-lifecycle.md</a>
+</li>
+  <li>Brent and Tobias will work together to draft a charter</li>
+</ul>
+
+<p>Future steps:</p>
+
+<ul>
+  <li>
+    <p>Possible working group, or addition to DIF C&amp;C WG for work on ldp-bbs2021</p>
+  </li>
+  <li>
+<a href="https://trbouma.medium.com/the-power-of-a-secret-c9fa6a404ea3">The Power of a Secret</a>
+    <blockquote>
+      <p>What had been discovered by Whitfield Diffie and Martin Hellman (and also Jame Ellis), is changing the world as we know it. It’s been only 43 years. Yes, that seems like an ice-age ago, but in the grand scheme of history, it is only a wink.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://datatracker.ietf.org/meeting/114/materials/slides-114-jwp-beyond-jws-bbs-00">Beyond JWS: BBS as a new algorithm with advanced capabilities utilizing JWP</a> – <a href="https://twitter.com/tplooker">Tobias Looker</a>
+</li>
+  <li><a href="https://twitter.com/SSI_by_memes/status/1578045600833994755">SelfSovereignIdentity_memes</a></li>
+</ul>
+
+<p>Currently, everyone waiting for <a href="https://twitter.com/hashtag/AIP2">#AIP2</a>, which enables <a href="https://twitter.com/hashtag/BBS">#BBS</a>+ <a href="https://twitter.com/hashtag/Signature">#Signature</a> in #SSI. Companies already implemented in their products, such as <a href="https://twitter.com/trinsic_id">@trinsic_id</a> and <a href="https://twitter.com/mattrglobal">@mattrglobal</a>. But ZKP <a href="https://twitter.com/hashtag/predicates">#predicates</a> are not supported by BBS+, so no ZKP age verification possible. Back to <a href="https://twitter.com/hashtag/AnonCreds">#AnonCreds</a>?</p>
+<ul>
+  <li>
+<a href="https://medium.com/finema/anonymous-credential-part-3-bbs-signature-26797721ca74">Anonymous Credential Part 3: BBS+ Signature</a>
+    <blockquote>
+      <p>Compared to the CL signature, the BBS+ signature has much shorter keys and signatures for a comparable level of security. As a result, the BBS+ signature enables fast implementation for anonymous credentials. It can be used in combination with signature proof of knowledge to hide some of credential attributes/messages in a zero-knowledge fashion.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>The BBS+ signature will also soon be available in <a href="https://finema.co/">Finema</a>’s Identity Wallet! We are excited to see how this technology will make an impact to the society in the coming years.</p>
+
+<ul>
+  <li><a href="https://github.com/hyperledger/aries-rfcs/tree/main/features/0646-bbs-credentials#drawbacks">aries-rfcs/0646-bbs-credentials#drawbacks</a></li>
+  <li>
+<a href="https://www.youtube.com/watch?v=dXlRIrrb9f4">What BBS+ Means For Verifiable Credentials</a> Evernym
+    <blockquote>
+      <p>In a recent Evernym blog post, <a href="https://www.evernym.com/blog/bbs-verifiable-credentials/">we discussed why BBS+ LD-Proofs</a> are the privacy-preserving VC format that everyone should implement. In this webinar….</p>
+      <ul>
+        <li>A brief history of verifiable credential formats, and how a lack of convergence makes scale and interoperability an ongoing challenge</li>
+        <li>How BBS+ Signatures are the breakthrough that combine the best of the JSON-LD and ZKP formats, while still allowing for selective disclosure and non-trackability</li>
+        <li>The path forward: What remains to be done to fully converge on the BBS+ format</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://iiw.idcommons.net/11E/_BBS+_Credential_Exchange_in_Hyperledger_Aries">BBS+ Credential Exchange in Hyperledger Aries</a> [<a href="https://iiw.animo.id">presentation</a>]</li>
+  <li>
+<a href="https://github.com/WebOfTrustInfo/rwot11-the-hague/blob/master/advance-readings/advanced-didcomm-messaging.md">Advanced DIDComm Messaging</a> By: Karim Stekelenburg (Animo Solutions) – karim@animo.id Date: 18-07-2022 Version: 0.1
+    <blockquote>
+      <p>in order for DIDComm to provide a potential replacement for commonly used chat protocols like WhatsApp (Extensible Messaging and Presence Protocol (XMPP)), Telegram (MTProto), or Signal (Signal Protocol), it needs to support modern chat features we use everyday</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><a href="https://w3c-ccg.github.io/ldp-bbs2020/">BBS+ Signatures 2020</a></p>
+  </li>
+  <li>What’s next for BBS+ LD-Proofs?</li>
+  <li>Implementation in Aries (<a href="https://iiw.animo.id/">https://iiw.animo.id/</a>, Used in SVIP Plugfest</li>
+</ul>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+  <!-- start custom analytics snippet -->
+
+
+
+
+<!-- end custom analytics snippet -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,375 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Authorization Protocols |  Decentralized Identity Web Directory</title>
+<meta name="description" content="Learning to create an Identity Layer for the Internet, that is vendor agnostic and as widely interoperable, as possible, putting users in control of their personal information.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="Authorization Protocols">
+<meta property="og:url" content="https://decentralized-id.com/identosphere-dump/open-standards/authorization/">
+
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/did-twitter.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="Authorization Protocols">
+  <meta name="twitter:description" content="Learning to create an Identity Layer for the Internet, that is vendor agnostic and as widely interoperable, as possible, putting users in control of their personal information.">
+  <meta name="twitter:url" content="https://decentralized-id.com/identosphere-dump/open-standards/authorization/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://decentralized-id.com/images/did-twitter.webp">
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/identosphere-dump/open-standards/authorization/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--page">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >Welcome</a>
+            </li><li class="masthead__menu-item">
+              <a href="/introduction/" >Introduction</a>
+            </li><li class="masthead__menu-item">
+              <a href="/posts/" >Recent</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aim/" >Aim</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <h1 id="authorization-protocols">Authorization Protocols</h1>
+
+<ul>
+  <li><a href="https://lists.w3.org/Archives/Public/public-credentials/2021Jun/0009.html">VC HTTP Authorization Conversation</a> Adrian Gropper June 2</li>
+</ul>
+
+<p>The diversity of our community is a plus. To begin a conversation on VC access controls, I suggest this short intro to the differences between OAuth 2.0 and GNAP:</p>
+
+<ul>
+  <li><a href="https://www.ietf.org/archive/id/draft-ietf-gnap-core-protocol-05.html#name-compared-to-oauth-20">https://www.ietf.org/archive/id/draft-ietf-gnap-core-protocol-05.html#name-compared-to-oauth-20</a></li>
+</ul>
+
+<p>My goal is to arrive at a shared understanding of what would be minimum needed to support both OAuth2 and GNAP for securing access to a VC.</p>
+
+<h2 id="ocap">oCap</h2>
+<ul>
+  <li><a href="https://lists.w3.org/Archives/Public/public-credentials/2020Dec/0028.html">Hygiene for a computing pandemic: separation of VCs and ocaps/zcaps</a>
+    <ul>
+      <li>You <em>could</em> implement zcap-ld on top of VCs…</li>
+      <li>However, you’re actually squishing together what should be a separation of concerns in a way that will become <em>unhygienic</em>. Like a lack of proper biological hygiene, the result is sickness in our computing systems.</li>
+      <li>The observation of “these things seem so similar though!” is true, but you can already make that claim even if you’re just looking at the linked data proofs layer. VCs and zcap-ld diverge from there for two very separate purposes: what is said, and what is done.</li>
+    </ul>
+  </li>
+  <li><a href="https://w3c-ccg.github.io/meetings/2021-01-13/audio.ogg">CCG Call about ZCaps and OCaps</a> (<a href="https://w3c-ccg.github.io/meetings/2021-01-13/">minutes</a>)</li>
+</ul>
+
+<p>This week’s CCG teleconference had a great discussion about object capabilities</p>
+
+<blockquote>
+  <p>Alan Karp:  I’ve been doing capabilities since I reinvented them in 1996 and I want to make sure we get it right, because when newbies start to use them there are plenty of mistakes that can be made</p>
+
+  <p>[…]
+A capability or an OCAP is an unforgeable, transferable, permission to use the thing it designates … it combines designation with authorization</p>
+</blockquote>
+
+<ul>
+  <li><a href="https://blog.ceramic.network/capability-based-data-security-on-ceramic/">Building capability-based data security for Ceramic</a>
+    <blockquote>
+      <p>The 3Box Labs team recently published <a href="https://github.com/ChainAgnostic/CAIPs/pull/74">a new standard for creating capability containers</a> for accessing decentralized data to the <a href="https://github.com/ChainAgnostic/CASA">Chain Agnostic Standards Alliance</a>. Capability containers are an approach for managing advanced data security and permissions, commonly referred to as “Object Capabilities” or “OCAPs.”</p>
+    </blockquote>
+  </li>
+  <li><a href="https://blog.avast.com/impact-of-self-sovereign-identity-on-cybersecurity">The impact of self-sovereign identity on the cybersecurity world</a></li>
+  <li>
+    <p><a href="https://youtu.be/JmlvOKg_dS4?t=780">The Challenging New World of Privacy &amp; Security</a> Atlanta Innovation Forum (Enterprise)
+featuring folks from MSFT, GSM, and Michael Becker. The video looks at the range of risks present in managing identity assets.  Its focus is coming from the enterprise-level perspective.</p>
+  </li>
+  <li><a href="https://lists.w3.org/Archives/Public/public-credentials/2021Apr/0036.html">a few thoughts about zcaps</a> Nikos Fotiou</li>
+</ul>
+
+<p>I was reading zcaps draft, as well as related work, mostly macaroons (<a href="https://research.google/pubs/pub41892/">https://research.google/pubs/pub41892/</a>.</p>
+
+<p>Something that I found confusing  about capability documents is that they do not make clear the actions they concern. For example from this <a href="https://w3c-ccg.github.io/zcap-ld/#example-1"></a><a href="https://w3c-ccg.github.io/zcap-ld/#example-1">https://w3c-ccg.github.io/zcap-ld/#example-1</a> it is not clear that this is a capability for “driving a car”.</p>
+
+<ul>
+  <li><a href="https://lists.w3.org/Archives/Public/public-credentials/2021Apr/0037.html">Manu Responds:</a></li>
+</ul>
+
+<p>We are still trying to figure out how to explain these things to people.</p>
+
+<p>Capabilities-based systems are not a new concept; they’re decades old at this</p>
+
+<p>point. The challenge has always been in communicating why they’re useful and</p>
+
+<p>have a place in modern security systems.</p>
+
+<p>The Encrypted Data Vault work uses zcaps, and it’s there that we’re trying</p>
+
+<p>hard to explain to developers how to use it:</p>
+
+<ul>
+  <li>
+    <p><a href="https://identity.foundation/confidential-storage/#introduction">https://identity.foundation/confidential-storage/#introduction</a></p>
+  </li>
+  <li>
+    <p><a href="https://lists.w3.org/Archives/Public/public-credentials/2021Apr/0047.html">The “Verifiable” Economy [was RE: a few thoughts about zcaps]</a> Michael Herman (Trusted Digital Web) (Monday, 5 April)</p>
+  </li>
+</ul>
+
+<p>After ruminating on ZCAPs, VCs, DIDs, and DID Documents over Easter dinner, it occurred to me that we’re on the verge of creating a model for a “verifiable” economy…</p>
+
+<p><img src="https://www.notion.soimages/image3.png" alt="https://www.notion.soimages/image3.png" /></p>
+
+<ul>
+  <li><a href="https://lists.w3.org/Archives/Public/public-credentials/2021Apr/0062.html">Capability Authorization-enabled Decentralized Object Model [was RE: The “Verifiable” Economy [was RE: a few thoughts about zcaps]]</a> Michael Herman (Trusted Digital Web) (Wednesday, 7 April)</li>
+</ul>
+
+<p>I see all of this converging into a Capability Authorization-enabled Decentralized Object Model.  “More news at 11…”</p>
+
+<p><img src="https://www.notion.soimages/image1.png" alt="https://www.notion.soimages/image1.png" /></p>
+
+<p>Updates on Kepler including implementing support for <a href="https://github.com/spruceid/cacao-zcap">CACAO-ZCAPs</a>, improved the <code class="language-plaintext highlighter-rouge">put</code> function to make it easier to store objects of different types, and added support for listing objects by prefix: <a href="https://github.com/spruceid/kepler-sdk/pull/40">kepler-sdk#40</a> <a href="https://github.com/spruceid/kepler/pull/115">kepler#115</a>.</p>
+
+<ul>
+  <li><a href="https://lists.w3.org/Archives/Public/public-credentials/2021Apr/0038.html">The ezcap library</a> - Manu Sporny
+    <blockquote>
+      <p>Now might be a good time to announce some open source tooling a few of us have been working on related to zcaps that is being created to simplify the developer experience when developing with zcaps.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/digitalbazaar/ezcap">ezcap (pronounced “Easy Cap”)</a> - An easy to use, opinionated Authorization Capabilities (zcap) client library for the browser and Node.js.</li>
+</ul>
+
+<h2 id="ucan">UCAN</h2>
+
+<p><a href="https://github.com/ucan-wg">ucan-wg</a></p>
+<ul>
+  <li><a href="https://blog.fission.codes/lightweight-credentials-ucan/">Lightweight Credentials for Offers with UCAN</a></li>
+</ul>
+
+<p>these are the types of use cases that we think can be created and enabled across the web as an open, interoperable standard. And some of it crosses into the work we’re doing as <a href="https://blog.fission.codes/fission-demo-day-may-2021/">part of the Decentralized Identity Foundation</a>, too.</p>
+
+<ul>
+  <li><a href="https://github.com/ucan-wg/spec/">User Controlled Authorization Network</a> model and how it contrasts with decentralized approaches</li>
+  <li>APAC/ASEAN Community Call now a colloaborative initative between DIF and ToIP, launched Thursday 26th May 2022, kicking off with an IIW34 recap. (<a href="https://us02web.zoom.us/rec/share/5FW6hVoZc1kVJiFL4NNCRZg7625h-1UsC1xCY8Mb7cLXQpO2yDW566woLoA5IZA.MUVPrrNr_k3PXxDl">Recording</a>
+A couple weeks ago Amber Case came and spoke about “<a href="https://www.youtube.com/watch?v=Ngyfa4_NuPI">Calm Technology</a>” at the TOIP Human Experience Working Group (<a href="https://wiki.trustoverip.org/display/HOME/Human+Experience+Working+Group">HXWG</a></li>
+</ul>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+  <!-- start custom analytics snippet -->
+
+
+
+
+<!-- end custom analytics snippet -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

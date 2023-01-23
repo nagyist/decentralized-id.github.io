@@ -1,0 +1,429 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Trust Frameworks |  Decentralized Identity Web Directory</title>
+<meta name="description" content="Learning to create an Identity Layer for the Internet, that is vendor agnostic and as widely interoperable, as possible, putting users in control of their personal information.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="Trust Frameworks">
+<meta property="og:url" content="https://decentralized-id.com/identosphere-dump/open-standards/trust-frameworks/">
+
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/did-twitter.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="Trust Frameworks">
+  <meta name="twitter:description" content="Learning to create an Identity Layer for the Internet, that is vendor agnostic and as widely interoperable, as possible, putting users in control of their personal information.">
+  <meta name="twitter:url" content="https://decentralized-id.com/identosphere-dump/open-standards/trust-frameworks/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://decentralized-id.com/images/did-twitter.webp">
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/identosphere-dump/open-standards/trust-frameworks/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--page">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/about/">Welcome</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/introduction/">Introduction</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/posts/">Recent</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/aim/">Aim</a>
+            </li>
+</ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <h1 id="trust-frameworks">Trust Frameworks</h1>
+
+<h2 id="contents">Contents</h2>
+
+<ul>
+  <li>800-63-3</li>
+  <li>DIACC</li>
+</ul>
+
+<h2 id="links">Links</h2>
+
+<ul>
+  <li>
+<a href="https://stateofidentity.libsyn.com/digital-identity-and-attributes-trust-framework">Digital Identity and Attributes Trust Framework</a> State of Identity</li>
+</ul>
+
+<p>Do you trust technology and government to protect your data? On this week’s State of Identity podcast, host, Cameron D’Ambrosi is joined by Gareth Narinesingh, Head of Digital Identity at HooYu to discuss the bridge between payments and identity wallets, the UK’s next big push in adopting shared identity standards, and the foundation of decentralized identity verification across Web3 applications and the metaverse.</p>
+<ul>
+  <li>
+<a href="https://www.windley.com/archives/2022/03/the_ukrainian_war_pki_and_censorship.shtml">The Ukrainian War, PKI, and Censorship</a> Phil Windley</li>
+</ul>
+
+<p>PKI has created a global trust framework for the web. But the war in Ukraine has shone a light on its weaknesses. Hierarchies are not good architectures for building robust, trustworthy, and stable digital systems.</p>
+<ul>
+  <li>
+<a href="https://medium.com/caribou-digital/diagnostic-trends-shaping-the-future-of-digital-identification-181724c40068">Digital Caribou looks at the future trends impacting Digital Identity</a>
+    <blockquote>
+      <ol>
+        <li>The state of the art in digital identification are trust frameworks that accommodate diverse technologies, systems and stakeholders</li>
+        <li>Risks remain even within the most rigorous trust framework:</li>
+        <li>Achieving inclusion requires addressing both technical and political dimensions</li>
+        <li>Trust frameworks are complicated so getting governance right requires an ecosystems approach</li>
+        <li>Building the future of digital identification means reckoning with an analogue past</li>
+      </ol>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://medium.com/mattr-global/learn-concepts-trust-frameworks-ad96a4427991">Trust Frameworks</a>
+    <blockquote>
+      <p>Trust frameworks are a foundational component of the web of trust. A trust framework is a common set of best practice standards-based rules that ensure minimum requirements are met for security, privacy, identification management and interoperability through accreditation and governance. These operating rules provide a common framework for ecosystem participants, increasing trust between them.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://ssi-ambassador.medium.com/the-trust-infrastructure-of-self-sovereign-identity-ecosystems-551f46ed9e2c">The trust infrastructure of self-sovereign identity ecosystems</a>
+    <blockquote>
+      <p>The trust infrastructure is concerned with the question of how and why the presented information can be trusted. It defines the rules for all stakeholders and enables legally binding relationships with the combination of governance frameworks, which are built on top of trust frameworks.</p>
+
+      <p>includes a section on the core components of identity architecture that includes a graphic <a href="https://www.windley.com/archives/2020/09/the_architecture_of_identity_systems.shtml">based on a post by Phil Windley</a></p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://northernblock.io/battle-of-the-trust-frameworks-with-tim-bouma-darrell-odonnell">Battle of the Trust Frameworks with Tim Bouma &amp; Darrell O’Donnell</a> Northern Block</li>
+</ul>
+
+<ol>
+  <li>Levels of Assurance (LOA): an introduction to LOAs as they relate to Digital Identity and why they’re an important part of the recipe in achieving digital trust. Tim and Darrell give us some practical examples of LOAs.</li>
+  <li>The Concept of Trust: how do we define trust at a high-level and how do we differentiate between technical and human trust? How can we build trust with credential issuers but also with credential holders?</li>
+  <li>The World of Trust Frameworks: what are trust frameworks and what are different types of frameworks being deployed in both the public and private sectors? How are organizations trying to monetize trust frameworks? What’s going right, and what’s going wrong with the way trust frameworks are being implemented?</li>
+  <li>The Importance of Open Source for Trust Creation: why is open source important for achieving digital sovereignty? Is open source the only way to improve transparency, flexibility and accountability?
+    <ul>
+      <li>
+<a href="https://iiw.idcommons.net/23F/_Good_Health_Pass_Ecosystem_Trust_Architecture:_DIDs_and_X.509_Trust_Registries_with_Ecosystem_Governance_Frameworks">Good Health Pass Ecosystem Trust Architecture: DIDs and X.509 Trust Registries with Ecosystem Governance Frameworks</a> by Drummond Reed, Scott Perry, Darrell O’Donnell</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Governance, Trust Registry, Ecosystem, Transitive Trust, Architecture</p>
+
+<p>Presentation Deck: <a href="https://drive.google.com/file/d/1Hgh5JvrM7aUCmg5q6KIXzvpVIcgfhTjr/view?usp=sharing">GHP Ecosystem Trust Architecture PDF</a></p>
+
+<ul>
+  <li>Proposed Trust Interoperability (Global) for the Good Health Pass (GHP) Ecosystem</li>
+  <li>Kaliya Young &amp; Rebecca Distler - Working Group Co-Leads</li>
+  <li>Trust in the system - focus for today’s discussion.</li>
+  <li>Principles - <a href="https://www.goodhealthpass.org/wp-content/uploads/2021/02/Good-Health-Pass-Collaborative-Principles-Paper.pdf">https://www.goodhealthpass.org/wp-content/uploads/2021/02/Good-Health-Pass-Collaborative-Principles-Paper.pdf</a>
+</li>
+  <li>Blueprint Outline - <a href="https://www.goodhealthpass.org/wp-content/uploads/2021/03/GHPC-Interoperability-Blueprint-Outline-v2.pdf">https://www.goodhealthpass.org/wp-content/uploads/2021/03/GHPC-Interoperability-Blueprint-Outline-v2.pdf</a>
+</li>
+  <li>Global Problems inhibiting world travel. Many emerging instances of GHP related ecosystems. GHP establishing an umbrella for all GHP-compliant ecosystems.</li>
+  <li>Relying on the ToIP Trust stack as an architectural blueprint</li>
+  <li>Ecosystem Governance Framework is at the top of a governance and technical stack.</li>
+  <li>Some specific Ecosystems need to accommodate x.509 certificate and VC constructs.</li>
+  <li>ToIP Stack diagram is undergoing new changes - some new terminology being discussed at IIW.</li>
+  <li>Governance and Trust Framework terms are being used as synonyms but we conveyed that Governance Frameworks are over arching of subject Trust Frameworks.</li>
+  <li>GHP wll be a General Ecosystem Governance Framework. Overseeing Specific EGFs..</li>
+  <li>
+  <li>It is likely to have a GHP compliance but only on the lightweight tenets of interoperability.</li>
+  <li>We are introducing a trust registry infrastructure that works with all GHP-compliant ecosystems.</li>
+  <li>Issuers within an ecosystem will be included in a trust registry.</li>
+  <li>Each Ecosystem must publish its governance framework and make its trust registry available</li>
+  <li>All issuers need to be recognized by a governance framework and included in a trust registry</li>
+  <li>The second principle is that each specific EGF will identify its trust registry with a DID and specify its trust registry service endpoint(s) in its associated DID document</li>
+  <li>The third principle is that each VC issued under a specific EGF will identify its issuer with either:</li>
+  <li>a DID</li>
+  <li>a URI (for X.509 certificates)</li>
+  <li>The final principle is that each VC issued under a specific EGF will identify its type with a type URI. That field will be using common semantics.</li>
+  <li>With this architecture, all we need is a simple trust registry protocol to answer the question:</li>
+  <li>Is this issuer</li>
+  <li>authorized to issue this VC type</li>
+  <li>under this specific EGF?</li>
+  <li>GOOD - is a pass</li>
+  <li>BETTER - may be purpose-limited (“trivial” example -</li>
+</ul>
+
+<p>Links from chat:</p>
+
+<ul>
+  <li>
+    <p>Bart Suichies to Everyone : the eidas demo is here: <a href="https://essif.adaptivespace.io/">https://essif.adaptivespace.io/</a></p>
+  </li>
+  <li>
+    <p><a href="https://gitlab.grnet.gr/essif-lab/infrastructure/fraunhofer/deliverables">https://gitlab.grnet.gr/essif-lab/infrastructure/fraunhofer/deliverables</a> not sure if this an open repo</p>
+  </li>
+  <li>
+    <p><a href="https://gitlab.grnet.gr/essif-lab/infrastructure/fraunhofer/deliverables/-/blob/master/api_documentation/train-atv-1.0.0-swagger.yaml">https://gitlab.grnet.gr/essif-lab/infrastructure/fraunhofer/deliverables/-/blob/master/api_documentation/train-atv-1.0.0-swagger.yaml</a></p>
+  </li>
+  <li>
+    <p><a href="https://gitlab.grnet.gr/essif-lab/infrastructure/fraunhofer/train_project_summary">https://gitlab.grnet.gr/essif-lab/infrastructure/fraunhofer/train_project_summary</a></p>
+  </li>
+  <li>Drummond Reed to Everyone : See the anti-coercion section of the original ToIP RFC: <a href="https://github.com/hyperledger/aries-rfcs/blob/master/concepts/0289-toip-stack/README.md">https://github.com/hyperledger/aries-rfcs/blob/master/concepts/0289-toip-stack/README.md</a>
+</li>
+  <li>Sterre den Breeijen to Everyone : <a href="https://blockchain.tno.nl/blog/verify-the-verifier-anti-coercion-by-design/">https://blockchain.tno.nl/blog/verify-the-verifier-anti-coercion-by-design/</a> Blog on anti-coercion by my colleague Oskar van Deventer</li>
+  <li>Bart Suichies to Everyone : <a href="https://twitter.com/judith" class="user-mention">@judith</a>: <a href="https://gitlab.grnet.gr/essif-lab/infrastructure/fraunhofer/train_project_summary">https://gitlab.grnet.gr/essif-lab/infrastructure/fraunhofer/train_project_summary</a>
+</li>
+  <li>Darrell O’Donnell to Everyone : TRAIN - <a href="https://essif-lab.eu/essif-train-by-fraunhofer-gesellschaft/">https://essif-lab.eu/essif-train-by-fraunhofer-gesellschaft/</a>
+</li>
+  <li>Drummond Reed to Everyone : Bart, I am totally on board with the human-readable element for GHP. Happy to chat more with you about that. There is a lot of focus on that in the <a href="https://wiki.trustoverip.org/display/HOME/Consistent+User+Experience+Drafting+Group">Consistent User Experience drafting group</a>
+<a href="https://diacc.ca/wp-content/uploads/2016/08/PCTF-Overview-FINAL.pdf">Pan-Canadian Trust Framework</a>
+</li>
+  <li>
+<a href="https://digitalidentity.nz/2022/09/21/towards-a-better-digital-identity-trust-framework-in-aotearoa/">Towards a Better Digital Identity Trust Framework in Aotearoa</a> Digital Identity NZ</li>
+</ul>
+
+<p>It’s a great pleasure to share with you DINZ Reflections Report, a seminal piece of work that DINZ’s Digital Identity Trust Framework working group has developed over several months.</p>
+<ul>
+  <li>
+<a href="https://medium.com/@trbouma/trust-frameworks-standards-matter-47c946992f44">Trust Frameworks? Standards Matter</a> Tim Bouma
+    <blockquote>
+      <p>He points at the NIST documents about it <a href="https://nvlpubs.nist.gov/nistpubs/ir/2018/NIST.IR.8149.pdf">Developing Trust Frameworks to Support Identity Federations</a> published in 2018. He also points at the Canadian government’s definition of standards.</p>
+
+      <p>“a document that provides a set of agreed-upon rules, guidelines or characteristics for activities or their results. Standards establish accepted practices, technical requirements, and terminologies for diverse fields.”  He goes on to highlight a lot of the work being done in Canada and where it all sits relative to being a standard - “In closing, there are lots of trust frameworks being developed today. But to be truly trusted, a trust framework needs to either apply existing standards or become a standard itself.”</p>
+    </blockquote>
+  </li>
+  <li><a href="https://northernblock.io/pan-canadian-trust-framework/">Pan-Canadian Trust Framework (PCTF) – Overview</a></li>
+</ul>
+
+<p>Right now, we are alpha testing the framework with different kinds of actors, both public and private, and with assessors. Through this process, we’re going to learn what may need to change, and what may not need to change. We’re going to get real knowledge there. I will say that what we’re seeing already, is that DIACC and our priorities are really driven by members.</p>
+
+<ul>
+  <li>
+<a href="https://trinsic.id/trinsic-basics-what-is-a-trust-registry/">Trinsic Basics: What Is a Trust Registry?</a> Trinsic</li>
+</ul>
+
+<p>Trust registries also need to be interoperable. The <a href="https://www.trustoverip.org/">Trust Over IP Foundation</a> has a <a href="https://github.com/trustoverip/tswg-trust-registry-tf">specification</a> for an interoperable trust registry, and ours is the first implementation of this spec. Because of this, Trinsic’s Trust Registry Service is architected so that one ecosystem could reference or incorporate a trust registry from a separate ecosystem if needed.</p>
+
+<h2 id="trust-registries">Trust Registries</h2>
+
+<ul>
+  <li>
+<a href="https://www.continuumloop.com/managing-trust-and-reputation-via-trust-registries/">Managing Trust and Reputation via Trust Registries</a> Continuum Loop</li>
+</ul>
+
+<p>The concept behind a Trust Registry is that a Wallet needs to know which decentralized identifiers (DIDs) to “trust” as a source of truth. At many levels, this “trust” translates to “authority” – knowing that somebody, centralized or decentralized, is responsible for maintaining a list of trusted DIDs.</p>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+  <!-- start custom analytics snippet -->
+
+
+
+
+<!-- end custom analytics snippet -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

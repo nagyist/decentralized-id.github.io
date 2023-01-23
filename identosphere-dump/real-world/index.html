@@ -1,0 +1,457 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Real World Implementations |  Decentralized Identity Web Directory</title>
+<meta name="description" content="Learning to create an Identity Layer for the Internet, that is vendor agnostic and as widely interoperable, as possible, putting users in control of their personal information.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="Real World Implementations">
+<meta property="og:url" content="https://decentralized-id.com/identosphere-dump/real-world/">
+
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/did-twitter.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="Real World Implementations">
+  <meta name="twitter:description" content="Learning to create an Identity Layer for the Internet, that is vendor agnostic and as widely interoperable, as possible, putting users in control of their personal information.">
+  <meta name="twitter:url" content="https://decentralized-id.com/identosphere-dump/real-world/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://decentralized-id.com/images/did-twitter.webp">
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/identosphere-dump/real-world/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--page">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/about/">Welcome</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/introduction/">Introduction</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/posts/">Recent</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/aim/">Aim</a>
+            </li>
+</ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <h1 id="real-world-implementations">Real World Implementations</h1>
+<ul>
+  <li>
+    <p><a href="https://twitter.com/philarcher1/status/1570082512122294273">Notes from W3C TPAC on major deployments of Verifiable Credentials</a> Manu Sporny via Phil Archer</p>
+  </li>
+  <li>Steel, Oil Agriculture Shipment into US Customs ($2.3T in good/year)</li>
+  <li>European Digital Wallet (€163M funding, 450M people)</li>
+  <li>Digital Education Credentials in Uganda, Nigeria, Kenya (323M people)</li>
+  <li>Digital Age Verfication (152k retail stores, 200M people)</li>
+  <li>Content Authenticity Initative (30M Adobe customers)</li>
+  <li>Digital Permanent Resident Cards (14M people)</li>
+  <li>
+<a href="https://iiw.idcommons.net/11A/_IIW_verifiable_credentials_-_Decentralized_VC_integration_with_Eventbrite_and_Qiqo_chat._This_session_will_review_the_implementation_process,_lessons_learned,_and_community_discussion_on_related_use_cases.">IIW verifiable credentials - Decentralized VC integration with Eventbrite and Qiqo chat. This session will review the implementation process, lessons learned, and community discussion on related use cases.</a> by Mike Vesey, Karl Kneis
+    <h2 id="real-world">Real World</h2>
+  </li>
+  <li>
+<a href="https://iiw.idcommons.net/22C/_NHS_Staffpassport;_Based_on_Evernym_Verity_built_by_Sitekit/Condatis;_A_12_month_experience">NHS Staffpassport; Based on Evernym Verity built by Sitekit/Condatis; A 12 month experience</a> by Chris Eckl, Richard Astley
+    <blockquote>
+      <p>The NHS Staff passport system was created to allow NHS employees to be redeployed between different organisations to meet urgent demand and remove the onboarding challenges when staff onboard with new organisations.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://www.slideshare.net/secret/JGSugec83U6ouP">Condatis IIW32 NHS Digital Staffpassport Learnings (slideshare.net)</a></li>
+  <li>
+<a href="https://www.windley.com/archives/2021/05/building_an_ssi_ecosystem_digital_staff_passports_at_the_nhs.shtml">Building an SSI Ecosystem: Digital Staff Passports at the NHS</a> Windley
+    <blockquote>
+      <p>How does a functioning credential ecosystem get started? This post goes deep on Manny Nijjar’s work to create a program for using digital staff passports in the sprawling UK NHS bureaucracy.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="http://informationmatters.org/2021/08/using-blockchain-to-get-information-when-you-need-it-from-wherever-you-are/">Using Blockchain to Get Information When You Need It from Wherever You Are</a> Information Matters
+    <blockquote>
+      <p>The goal of this project is to provide unencumbered access to digital content and print collections while ensuring the privacy and personal identity of each user is secure. Partner libraries will issue a ULC to any individual with either a fixed or descriptive address. Information access will be increased as users gain access to resources and services in those libraries that recognize the ULC.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://www.canto.org/blog/divitel-and-ledger-leopard-team-up-to-apply-blockchain-self-sovereign-identity-technology-to-video-distribution/">Divitel &amp; Ledger Leopard Team Up to Apply Blockchain &amp; Self Sovereign Identity Technology to Video Distribution</a></li>
+</ul>
+
+<p>ready to market by end of end of 2022 offering increased flexibility, control, ease of use and speed when managing the access of video distribution ecosystem data, independent of the technology used.  Divitel video carrier customers will be offered the option to include this blockchain module on top of their ecosystems.</p>
+
+<ul>
+  <li>
+<a href="https://app.slidebean.com/p/6acrochkpj/IIW-April-22-2021">https://app.slidebean.com/p/6acrochkpj/IIW-April-22-2021</a>  RANDA</li>
+</ul>
+
+<p>State agency feedback:</p>
+
+<ul>
+  <li>Identity is at the heart</li>
+  <li>Disconnect between the data desired and the data entered</li>
+  <li>Confusing fields, more confusing mapping</li>
+  <li>Mismatched data</li>
+  <li>Stick to 99% of a standard</li>
+</ul>
+
+<p>School has changed:</p>
+
+<ul>
+  <li>Used to be:</li>
+  <li>District organized by physical location</li>
+  <li>Revenue systems based on seat time</li>
+  <li>School buildings</li>
+  <li>Classrooms divided into grades</li>
+  <li>Teachers as sage on the stage</li>
+  <li>COVID:</li>
+  <li>Some kids still out of school</li>
+  <li>Playlists, virtual classrooms, hybrid</li>
+  <li>Access to food. Access to internet. Access to a device.</li>
+  <li>Teachers maxed to the limit</li>
+  <li>FUTURE:</li>
+  <li>Learning Loss?!?</li>
+  <li>Social Emotional Learning?!?</li>
+  <li>1/3 of students expected not to return</li>
+  <li>Virtual models abound</li>
+  <li>Teacher mobility and agency</li>
+  <li>Chaos versus Opportunity?</li>
+</ul>
+
+<p>Questions for discussion:</p>
+
+<ul>
+  <li>Identity technical solutions are easy. The data clean up and alignment is the first problem to solve.</li>
+  <li>How can self attestation be trustworthy?</li>
+  <li>What are the responsibilities of a proxy issuer?</li>
+  <li>How far can we move people’s cheese before they rebel?</li>
+</ul>
+
+<p>https://unece.org/trade/uncefact/guidance-material</p>
+
+<ul>
+  <li>
+<a href="https://www.hyperledger.org/blog/2021/01/20/kiva-protocol-built-on-hyperledger-indy-ursa-and-aries-powers-africas-first-decentralized-national-id-system">Kiva Protocol, Built on Hyperledger Indy, Ursa and Aries, Powers Africa’s First Decentralized National ID system</a> (<a href="https://www.hyperledger.org/wp-content/uploads/2021/01/Hyperledger_CaseStudy_Kiva_Printable.pdf">CASE STUDY</a>)
+    <blockquote>
+      <p>Since the launch of Kiva Protocol, Davie says global regulators have made significant progress in terms of how they are considering digital identity and eKYC verifications. He sees a global movement towards user-owned and -controlled data, better privacy, and more universal access.</p>
+
+      <p><em>[…]</em>
+As of today, Kiva is focusing on building additional ecosystem applications and services to make it easier for all stakeholders to access and use Kiva Protocol. Much of this is being contributed upstream into the Hyperledger Indy and Aires projects, with the remaining components hosted in Kiva’s repository.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://hyperonomy.com/2021/06/15/the-verifiable-economy-fully-decentralized-object-fdo-example-bobs-udid-document/">The Verifiable Economy: Fully Decentralized Object (FDO) Example: Bob’s UDID Document</a></li>
+</ul>
+
+<p>Strongly-typed Code to Generate Bob’s UDID Document</p>
+
+<p>A pertinent example of how this can be applied in the corporate world is this example of the <a href="https://www.badges.sssc.uk.com/getting-started/what-you-need-to-know-about-open-badges/">Scottish Social Services Council uses them</a> to underpin workforce learning. The BCS describes this as the <a href="https://www.bcs.org/content-hub/digital-badging-the-future-of-professional-development/">future of professional development</a>, with many organizations like <a href="https://new.siemens.com/uk/en/company/education/teachers/siemens-digital-badges.html">Siemens</a> using them this way.</p>
+<ul>
+  <li>
+<a href="https://trinsic.id/owi-digital-forum-recap-the-rise-adoption-of-verifiable-credentials/">OWI Digital Forum Recap: The Rise &amp; Adoption of Verifiable Credentials</a>
+    <blockquote>
+      <p>Trinsic CEO Riley Hughes sat down with <a href="https://oneworldidentity.com/">One World Identity</a> (OWI) CEO Travis Jarae to have a one-on-one conversation about <a href="https://oneworldidentity.com/session/trinsic/">“The Rise &amp; Adoption of Verifiable Credentials”</a>. Below is a short summary</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://academy.affinidi.com/25-proof-of-concept-poc-for-verifiable-credentials-edf684b592f2">25+ Proof of Concepts (PoCs) for Verifiable Credentials</a> Affinidi
+    <blockquote>
+      <p>Today, we proudly present another 25+ Proof of Concepts for VC implementation. These use cases are a compilation of the <a href="https://affinidipocathon.devpost.com/">submissions</a> (in no particular order) made by the participants of the Affindi PoCathon 2021.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="real-world-1">Real World</h2>
+<ul>
+  <li>
+    <p><a href="https://www.youtube.com/watch?v=SaNvIorKQ9I">DIF F2F demo session</a></p>
+  </li>
+  <li>
+    <p><a href="https://findy-network.github.io/blog/2022/03/05/the-missing-network-layer-model/">The Missing Network Layer Model</a> Findy</p>
+  </li>
+</ul>
+
+<p>Epic Post</p>
+
+<p>You might think that I have lost my mind. We have just reported that our Indy SDK based DID agency is <a href="https://github.com/hyperledger/aries-rfcs/blob/main/concepts/0302-aries-interop-profile/README.md">AIP 1.0</a> compatible, and everything is wonderful. What’s going on?</p>
+
+<ul>
+  <li>
+<a href="https://podcasts.apple.com/us/podcast/supply-chain-revolution/id1496899179?i=1000507363757">Digitizing the 1st Mile with Blockchain, AI, and Self Sovereign Identity Connecting Coffee Farmers from Field to 1st Sip in Sustainable Supply Chains with Farmer Connect</a> Supply Chain Revolution</li>
+</ul>
+
+<p>Think about the journey of a coffee bean from East Africa to the consumer. Thousands of miles away in the 1 sip to field wrapped in a complex, and often unsustainable, inequitable supply chain. There are 25 million people living in the coffee ecosystem, and 2.5 billion coffee drinkers worldwide, and that number is expected to 2-3X in coming years.</p>
+<h2 id="cerebrum">Cerebrum</h2>
+<ul>
+  <li>
+<a href="https://www.prnewswire.com/news-releases/cerebrum-launches-identity-pittsburgh-initiative-in-partnership-with-carnegie-mellon-universitys-etim-program-301616404.html">Cerebrum Launches Identity Pittsburgh Initiative in Partnership with Carnegie Mellon University’s ETIM Program</a> PRNewswire</li>
+</ul>
+
+<p>One example use case is medical records, which are often stored in central repositories and are hard for patients to access or share. Verifiable credentials offer an alternative — have patients store their medical records in digital wallets they control — which solves issues with interoperability, data ownership, and data access.</p>
+<h3 id="cde-services">CDE Services</h3>
+<ul>
+  <li>
+<a href="https://www.prnewswire.com/news-releases/age-verification-solution-truage-to-be-deployed-by-cde-services-inc-expanding-access-to-convenience-stores-nationwide-301597284.html">Age-Verification Solution TruAge to be Deployed by CDE Services, Inc., Expanding Access to Convenience Stores Nationwide</a> PRNewswire</li>
+</ul>
+
+<p>“The convenience retailing industry conducts 165 million transactions a day and 50 million of them involve an age-restricted product. It is exciting to announce that TruAge will be implemented into thousands of stores that conduct age-restricted transactions,” said TruAge CEO Kyle McKeen.</p>
+
+<h2 id="supply-chain">Supply chain</h2>
+
+<ul>
+  <li>
+<a href="https://medium.com/@Transmute/identity-terms-provide-value-along-the-supply-chain-how-we-know-when-to-buy-the-farm-738701967e3d">Identity Terms Provide Value along the Supply Chain: How We Know When to Buy the Farm</a> Jessica Tacka, Transmute
+    <blockquote>
+      <p>Supply chain credentialing in the form of bills of lading, certificates of origin, or letters of credit is used to protect honest parties and their merchandise from being confused with dishonest parties or entities that are engaged in unethical practices, such as environmental destruction, or forced labor.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://nextlevelsupplychainpodwithgs1us.libsyn.com/visibility-20-creating-digital-consistency-in-an-international-supply-chain">Visibility 2.0: Creating Digital Consistency in an International Supply Chain</a> Next Level Supply
+    <blockquote>
+      <p>how can something as complicated as the international supply chain take fundamental trade practices and marry them with innovation so we can move at the speed of digitization? Join us for a mind-blowing discussion with Karyl Fowler, CEO at Transmute</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://vimeo.com/669713750">Identity in the Supply Chain</a> Vienna Digital Identity #30
+    <blockquote>
+      <p>GS1 is the global association for supply chain identifiers with members across all industry sectors and interacting (unbeknownst) with general consumer on a daily basis. Transmute a foundational member of the DID/VC community and a participant in the US DHS Silicon Valley Innovation Program’s cross-border shipping use case.</p>
+
+      <ul>
+        <li>Transmute Deck: <a href="https://www.thedinglegroup.com/s/Transmute_Vienna-Digital-ID-Forum-Jan-2022.pdf">thedinglegroup.com/s/Transmute_Vienna-Digital-ID-Forum-Jan-2022.pdf</a>
+</li>
+        <li>GS1 Deck: <a href="https://www.thedinglegroup.com/s/2022-01-24_ViennaDigitalIdentityPhilA.pdf">thedinglegroup.com/s/2022-01-24_ViennaDigitalIdentityPhilA.pdf</a>
+</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://unece.org/sites/default/files/2022-07/WhitePaper_VerifiableCredentials-CBT.pdf">eDATA Verifiable Credentials for Cross Border Trade</a> UNECE UN/CEFACT White Paper</li>
+  <li>
+<a href="https://twitter.com/TransmuteNews/status/1572692362148847619">Transmute @TransmuteNews</a> via Twitter
+    <blockquote>
+      <p>The “<a href="https://www.vice.com/en/article/akek8e/walmart-30tb-ssd-hard-drive-scam-sd-cards">[Fake] 30TB hard drive</a>” investigation shows the real impact verification could have on #eCommerce. #verifiablecredentials</p>
+    </blockquote>
+  </li>
+</ul>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+  <!-- start custom analytics snippet -->
+
+
+
+
+<!-- end custom analytics snippet -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

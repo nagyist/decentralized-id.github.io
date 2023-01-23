@@ -1,0 +1,342 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Decentralized Identity Web Directory</title>
+<meta name="description" content="Learning to create an Identity Layer for the Internet, that is vendor agnostic and as widely interoperable, as possible, putting users in control of their personal information.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="Decentralized Identity Web Directory">
+<meta property="og:url" content="https://decentralized-id.com/identosphere-dump/open-standards/authorization/oauth/">
+
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/did-twitter.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="Decentralized Identity Web Directory">
+  <meta name="twitter:description" content="Learning to create an Identity Layer for the Internet, that is vendor agnostic and as widely interoperable, as possible, putting users in control of their personal information.">
+  <meta name="twitter:url" content="https://decentralized-id.com/identosphere-dump/open-standards/authorization/oauth/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://decentralized-id.com/images/did-twitter.webp">
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/identosphere-dump/open-standards/authorization/oauth/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--page">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >Welcome</a>
+            </li><li class="masthead__menu-item">
+              <a href="/introduction/" >Introduction</a>
+            </li><li class="masthead__menu-item">
+              <a href="/posts/" >Recent</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aim/" >Aim</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+<ul>
+  <li><a href="https://lists.w3.org/Archives/Public/public-credentials/2021Apr/0152.html">OAuth2.0 and VCs</a> Nikos Fotiou
+    <blockquote>
+      <p>I would like to share with you a paper we have written and it will be presented at <a href="http://www.icccn.org/">IEEE ICCCN 2021</a>. You can find the paper here <a href="https://arxiv.org/abs/2104.11515">https://arxiv.org/abs/2104.11515</a> We tried to couple OAuth 2.0 flows with JWT/JWS and VCs in order to implement capabilities-based access control. Our goal was to show gains with minimal changes. Some things that might be of interest:</p>
+
+      <ul>
+        <li>We used Proof-of-Possession Key Semantics for JSON Web Tokens (RFC 7800) instead of credentialSubject <code class="language-plaintext highlighter-rouge">id</code></li>
+        <li>We used OAuth 2.0 Demonstration of Proof-of-Possession at the Application Layer (DPoP),(<a href="https://datatracker.ietf.org/doc/draft-ietf-oauth-dpop/">https://datatracker.ietf.org/doc/draft-ietf-oauth-dpop/</a>) for proving VC ownership</li>
+        <li>We discuss how Revocation list 2020 has better privacy properties compared to RFC 7662 (which can be used for examining the status of an access token)</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li><a href="https://iiw.idcommons.net/2B/_101_Session:_OAuth2">101 Session: OAuth2</a> by Aaron Parecki</li>
+  <li><a href="https://aaronparecki.com/oauth-2-simplified/">OAuth 2.0 Simplified</a> is a guide to OAuth 2.0 focused on writing clients that gives a clear overview of the spec at an introductory level.
+    <blockquote>
+      <p>In 2017, I published a longer version of this guide as a book, available on <a href="https://oauth.com/">oauth.com</a> as well as <a href="https://oauth2simplified.com">a print version</a>. The book guides you through building an OAuth server, and covers many details that are not part of the spec. I published this book in conjunction with <a href="https://developer.okta.com/">Okta</a>.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><a href="https://speakerdeck.com/aaronpk/oauth-101-internet-identity-workshop-xxxi">https://speakerdeck.com/aaronpk/oauth-101-internet-identity-workshop-xxxi</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.youtube.com/watch?v=g_aVPdwBTfw&amp;list=PLRyLn6THA5wN05b3qJ6N0OpL3YbritKI-">How OAuth Works</a> 12 videos</p>
+  </li>
+  <li><a href="https://iiw.idcommons.net/23B/_TMI_BFF:_OAuth_Token_Mediating_and_session_Information_Backend_For_Frontend">TMI BFF: OAuth Token Mediating and session Information Backend For Frontend</a> by Vittorio Bertocci &amp; Brian Campbell (but mostly Vittorio)</li>
+</ul>
+
+<p>OAuth, Javascript, Backend Infrastructure</p>
+
+<p>When there is an alternative, it is more secure to keep tokens out of the browser.</p>
+
+<p>Specifically talking about clients which are divided between a front end or javascript app, and backend supporting systems specifically for that/those apps</p>
+
+<p>Questions on whether this would also apply equivalently to native apps, which may have different capabilities and infrastructure requirements. It likely does work, but</p>
+
+<p>OAuth in the browser can be complicated and ASs don’t necessarily provide sufficient security features, support web interaction</p>
+
+<p>Bespoke workarounds acquiring tokens on the backend and passing to the frontend. Implementers may have security issues and not understand how to map best current practices</p>
+
+<p>TMI BFF</p>
+
+<ol>
+  <li>Backend gets and stores tokens, javascript frontend gets a cookie</li>
+  <li>Request to backend for access (scopes, potentially resource)</li>
+  <li>Backend returns the token, requests new token with appropriate scope, etc.</li>
+</ol>
+
+<ul>
+  <li>[…]</li>
+</ul>
+
+<p>What is the scope - acquiring a token for direct API access, not necessarily prescriptive for BFF architectures which put all API interactions through BFF. (DW) raised issue that simply converting OAuth calls in a remote party to local API calls protected by a cookie disables some security protections provided by OAuth tokens (XSRF), so some sort of BFF best practices may be needed to prevent footguns.</p>
+
+<ul>
+  <li>
+    <p>OpenID: <a href="https://openid.net/2021/06/07/public-review-period-for-two-proposed-sse-implementers-drafts/">Public Review Period for Two Proposed SSE Implementer’s Drafts</a></p>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[Matt Flynn: Information Security</td>
+          <td>Identity &amp; Access Mgmt.](http://360tek.blogspot.com/2021/06/bell-labs-colonial-pipeline-and-multi.html)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><a href="https://auth0.com/blog/introducing-the-oauth-2-game/">Introducing: The OAuth 2 Game</a></li>
+</ul>
+
+<p>It features two dice, one for grants and another for application types. Throw the dice and consult the instructions to discover whether the combination of grant and application type you obtained happens to be a good one! Play a few times, and before you know it, you’ll be familiar with the most common combinations!</p>
+<ul>
+  <li><a href="https://aaronparecki.com/2020/12/22/14/oauth">The Nuts and Bolts of OAuth 2.0</a></li>
+</ul>
+
+<p>Aaron Parecki - Mr. OAuth has a new course out on Udemy</p>
+
+<blockquote>
+  <p>3.5 hours of video content, quizzes, as well as interactive exercises with a guided learning tool to get you quickly up to speed on OAuth, OpenID Connect, PKCE, best practices, and tips for protecting APIs with OAuth.</p>
+</blockquote>
+
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+  <!-- start custom analytics snippet -->
+
+
+
+
+<!-- end custom analytics snippet -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

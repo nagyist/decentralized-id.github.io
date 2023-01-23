@@ -1,0 +1,476 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Web Standards |  Decentralized Identity Web Directory</title>
+<meta name="description" content="Learning to create an Identity Layer for the Internet, that is vendor agnostic and as widely interoperable, as possible, putting users in control of their personal information.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="Web Standards">
+<meta property="og:url" content="https://decentralized-id.com/identosphere-dump/open-standards/">
+
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/did-twitter.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="Web Standards">
+  <meta name="twitter:description" content="Learning to create an Identity Layer for the Internet, that is vendor agnostic and as widely interoperable, as possible, putting users in control of their personal information.">
+  <meta name="twitter:url" content="https://decentralized-id.com/identosphere-dump/open-standards/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://decentralized-id.com/images/did-twitter.webp">
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/identosphere-dump/open-standards/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--page">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >Welcome</a>
+            </li><li class="masthead__menu-item">
+              <a href="/introduction/" >Introduction</a>
+            </li><li class="masthead__menu-item">
+              <a href="/posts/" >Recent</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aim/" >Aim</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <h1 id="web-standards">Web Standards</h1>
+
+<h3 id="ibc">IBC</h3>
+
+<p>https://github.com/cosmos/ibc/</p>
+
+<h2 id="list">List</h2>
+<ul>
+  <li>aggregate well-known-did-1-of-a 1 of a (intermediate)</li>
+  <li>aggregate did-spec-registries-1-of-a Signature Implementations 1 of many (intermediate)</li>
+  <li>aggregate did-spec-registries-1-of-b did-method 1 of many (intermediate)
+    <ul>
+      <li>web-idl <a href="https://heycam.github.io/webidl">Web Interface Definition Language</a> (non-core)</li>
+    </ul>
+  </li>
+  <li>MATTR bbs-signatures-spec <a href="https://mattrglobal.github.io/bbs-signatures-spec">BBS+ Signature Scheme</a> (core)
+    <ul>
+      <li>rdf-dataset-normalization <a href="https://json-ld.github.io/normalization/spec">RDF Dataset Normalization</a> (non-core)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="w3c">W3C</h3>
+
+<p>Decentralized Identifier ✓</p>
+<ul>
+  <li>Explainer ✓</li>
+  <li>Literature +</li>
+  <li>Methods ✓</li>
+  <li>Tools \ Services</li>
+  <li>Critique ✓</li>
+</ul>
+
+<p>Verifiable Credential</p>
+<ul>
+  <li>Explainer  ✓</li>
+  <li>Comparisons  ✓</li>
+  <li>Varieties
+    <ul>
+      <li>JSON-LD</li>
+      <li>JSON-LD ZKP BBS+</li>
+      <li>JSON-JWT</li>
+      <li>ZKP-CL - [IIA] Indy Aries AnnonCreds</li>
+      <li>JWP</li>
+    </ul>
+  </li>
+</ul>
+
+<p>JSON-LD</p>
+<ul>
+  <li>
+    <p>[Complementary] JSON-LD ✓ (W3C)</p>
+  </li>
+  <li>[W3C] did-core <a href="https://www.w3.org/TR/did-core/">Decentralized Identifiers (DIDs) V1.0</a> (core)</li>
+  <li>[W3C] did-spec-registries <a href="https://w3c.github.io/did-spec-registries">DID Specification Registries</a> (core)</li>
+  <li>[W3C] security-vocab <a href="https://w3c-ccg.github.io/security-vocab">The Security Vocabulary</a> (core)</li>
+  <li>[W3C] Ed25519-signature-2018 <a href="https://w3c-ccg.github.io/lds-ed25519-2018">Ed25519 Signature 2018</a> (core)</li>
+  <li>[W3C] EcdsaSecp256k1-signature-2019 <a href="https://w3c-ccg.github.io/lds-ecdsa-secp256k1-2019">Ecdsa Secp256k1 Signature 2019</a> (core)</li>
+  <li>[W3C] RSA-signaturesuite-2018 <a href="https://w3c-ccg.github.io/lds-rsa2018">RSA Signature Suite 2018</a> (core)</li>
+  <li>[W3C] did-resolution <a href="https://w3c-ccg.github.io/did-resolution">Decentralized Identifier Resolution</a> (core)</li>
+  <li>[W3C] did-method-key <a href="https://w3c-ccg.github.io/did-method-key">The did:key Method</a> (non-core)</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[W3C]</td>
+          <td>DIF did-method-peer <a href="https://identity.foundation/peer-did-method-spec">Peer DID Method Specification</a> (non-core)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[W3C]</td>
+          <td>Sovrin did-method-sovrin <a href="https://sovrin-foundation.github.io/sovrin/spec/did-method-spec-template.html">Sovrin DID Method Specification</a> (non-core)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>[W3C] did-method-web <a href="https://w3c-ccg.github.io/did-method-web">did:web Method Specification</a> (non-core)</li>
+  <li>[W3C] JSON-LD <a href="https://www.w3.org/TR/json-ld11">A JSON-based Serialization for Linked Data</a> (non-core)</li>
+  <li>[W3C] XSD-Part2-Datatypes <a href="https://www.w3.org/TR/xmlschema11-2/">XML XSD� Part 2: Datatypes</a> (non-core)</li>
+  <li>[W3C] vc-data-model <a href="https://www.w3.org/TR/vc-data-model">Verifiable Credentials Data Model</a> (core)</li>
+  <li>[W3C] vc-use-cases <a href="https://www.w3.org/TR/vc-use-cases">Verifiable Credentials Use Cases</a> (core)</li>
+  <li>[W3C] vc-imp-guide <a href="https://w3c.github.io/vc-imp-guide">Verifiable Credentials Implementation Guidelines 1.0</a> (core)</li>
+  <li>[W3C] vc-extension-registry <a href="https://w3c-ccg.github.io/vc-extension-registry">Verifiable Credentials Extension Registry</a> (core)</li>
+  <li>[W3C] vc-status-rl-2020 <a href="https://w3c-ccg.github.io/vc-status-rl-2020/">Revocation List 2020</a> (core)</li>
+  <li>[W3C] vc-json-schemas <a href="https://w3c-ccg.github.io/vc-json-schemas">Verifiable CRedentials JSON Schema Spec</a> (core)</li>
+  <li>[W3C] vp-request-spec <a href="https://w3c-ccg.github.io/vp-request-spec">Verifiable Presentation Request Specification</a> (core)</li>
+  <li>[W3C] CHAPI <a href="https://w3c-ccg.github.io/credential-handler-api">Credential Handler API</a> (core)</li>
+  <li>[W3C] credential-management <a href="https://www.w3.org/TR/credential-management-1">Credential Management Level 1</a> (non-core)</li>
+  <li>[W3C] secure-contexts <a href="https://www.w3.org/TR/secure-contexts">Secure Contexts</a> (non-core)</li>
+  <li>[W3C] service-workers-1 <a href="https://www.w3.org/TR/service-workers-1">Service Workers 1</a> (non-core)</li>
+  <li>[W3C] ldp-bbs2020 <a href="https://w3c-ccg.github.io/ldp-bbs2020">BBS+ Signatures 2020</a> (core)</li>
+  <li>[W3C] ld-proofs <a href="https://w3c-ccg.github.io/ld-proofs">Linked Data Proofs</a> (core)</li>
+  <li>[W3C] ld-cryptosuite-registry <a href="https://w3c-ccg.github.io/ld-cryptosuite-registry">Linked Data Cryptographic Suite Registry</a> (core)</li>
+</ul>
+
+<h3 id="data-privacy-vocab">Data Privacy Vocab</h3>
+<ul>
+  <li><a href="https://kantarainitiative.org/confluence/collector/pages.action?key=WA&amp;src=sidebar-pages">https://kantarainitiative.org/confluence/collector/pages.action?key=WA&amp;src=sidebar-pages</a></li>
+</ul>
+
+<p>W3C Data Privacy Vocabulary Control</p>
+
+<ul>
+  <li>
+    <p><a href="https://dpvcg.github.io/dpv/#Representative">https://dpvcg.github.io/dpv/#Representative</a></p>
+  </li>
+  <li>
+    <p>[Primer] <a href="https://w3c.github.io/dpv/primer/#core-taxonomy">Data Privacy Vocabulary (DPV)</a> w3c</p>
+  </li>
+</ul>
+
+<p>Call for Comments/Feedbacks for DPV v1.0 release</p>
+
+<p>Please provide your comments by 15-OCT-2022 via <a href="https://github.com/w3c/dpv/issues/50">GitHub</a> or <a href="https://lists.w3.org/Archives/Public/public-dpvcg/">public-dpvcg@w3.org</a> (mailing list).</p>
+
+<h3 id="credentials-community-group">Credentials Community Group</h3>
+
+<ul>
+  <li>[Exchange] CHAPI  ✓ (CCG)</li>
+  <li>[Complementary] Cryptography &gt; BBS ✓ (CCG)</li>
+  <li>[Authorization] oCap/zCap ✓ (CCG)</li>
+</ul>
+
+<h3 id="ietf">IETF</h3>
+
+<ul>
+  <li>[Complementary]  (IETF)</li>
+  <li>[Authorization] GNAP ✓ (IETF)</li>
+  <li>[Authorization] OAuth ✓ (IETF)</li>
+  <li>[ID-Non-SSI] OAuth (IETF)</li>
+  <li>[ID-Non-SSI] SCIM (IETF)</li>
+  <li>[DIF] well-known-did <a href="https://identity.foundation/.well-known/resources/did-configuration">Well Known DID Configuration</a> (core)</li>
+  <li>[DIF] presentation-exchange <a href="https://identity.foundation/presentation-exchange">Presentation Exchange</a> (core)</li>
+  <li>[DIF] didcomm-messaging <a href="https://identity.foundation/didcomm-messaging/spec">DidComm Messaging</a> (core)</li>
+  <li>[DIF] did-comm-messaging-guide <a href="https://identity.foundation/didcomm-messaging/guide">DIDComm Messaging Implementer’s Guide</a> (core)</li>
+  <li>[DIF] EcdsaSecp256k1-recoverysignature-2020 <a href="https://identity.foundation/EcdsaSecp256k1RecoverySignature2020">EcdsaSecp256k1RecoverySignature2020</a> (core)</li>
+  <li>[IETF] multibase <a href="https://datatracker.ietf.org/doc/html/draft-multiformats-multibase-03">Multibase Data Format</a> (non-core)</li>
+  <li>[IETF] JWK <a href="https://tools.ietf.org/html/rfc7517">JSON Web Key</a> (non-core)</li>
+  <li>[IETF] Timestamps <a href="https://tools.ietf.org/html/rfc3339">Date and Time on the Internet: Timestamps</a> (non-core)</li>
+  <li>[IETF] JWT <a href="https://tools.ietf.org/html/rfc7519">JSON Web Token</a> (non-core)</li>
+  <li>[IETF] JWS <a href="https://tools.ietf.org/html/rfc7515">JSON Web Signtaures</a> (non-core)</li>
+  <li>[IETF] hashlinks <a href="https://tools.ietf.org/html/draft-sporny-hashlink-06">Cryptograohic Hyperlinks</a> (non-core)</li>
+  <li>[IETF] Token Binding <a href="https://tools.ietf.org/html/rfc8471">Token Binding Protocol</a> (non-core)</li>
+  <li>[IETF] ZLIB <a href="https://tools.ietf.org/html/rfc1950">ZLIB Compressed Data Format Spec v3.3</a> (non-core)</li>
+  <li>[IETF] Base 64 <a href="https://tools.ietf.org/html/rfc4648">Base16, Base32, Base 64 Data Encodings</a> (non-core)</li>
+  <li>[IETF] JWM <a href="https://tools.ietf.org/id/draft-looker-jwm-01.html">JSON Web Message</a> (non-core)</li>
+  <li>[IETF] JWA <a href="https://tools.ietf.org/html/rfc7518">JSON Web Algorithms</a> (non-core)</li>
+  <li>[IETF] JWS-unencoded-payload <a href="https://tools.ietf.org/html/rfc7797">JSON Web Signature (JWS) Unencoded Payload Option</a> (non-core)</li>
+  <li>[IETF] jwk-thumbprint <a href="https://tools.ietf.org/html/rfc7638">JSON Web Key (JWK) Thumbprint</a> (non-core)</li>
+</ul>
+
+<h3 id="oasis">OASIS</h3>
+
+<ul>
+  <li>[ID-Non-SSI] SAML (OASIS)</li>
+  <li>[ID-Non-SSI] KMIP (OASIS)</li>
+  <li>[ID-Non-SSI] Secure QR Code (OASIS)</li>
+</ul>
+
+<h3 id="itu-t">ITU-T</h3>
+
+<ul>
+  <li><a href="https://www.itu.int/en/ITU-T/studygroups/2017-2020/17/Pages/default.aspx">ITU-T SG17 - Kantara initiative and ITU-T SG 17</a></li>
+</ul>
+
+<h3 id="isoiec">ISO/IEC</h3>
+<ul>
+  <li>mDL 18013-5 ✓ (ISO)</li>
+  <li>22030 ?</li>
+  <li>Working Group 3 - Travel Documents</li>
+</ul>
+
+<h3 id="openid-foundation">OpenID Foundation</h3>
+<ul>
+  <li>[Exchange] OIDC  ✓ (OpenID)</li>
+  <li>[ID-Non-SSI] OpenID (OpenID)</li>
+</ul>
+
+<h3 id="iso">ISO</h3>
+<ul>
+  <li>[Exchange] mDL  ✓ (ISO)</li>
+  <li>[Blockchain] ISOTC 307 ✓ (ISO)</li>
+</ul>
+
+<h3 id="diacc">DIACC</h3>
+
+<ul>
+  <li>[TrustFramework] <a href="https://diacc.ca/trust-framework/">DIACC</a></li>
+</ul>
+
+<h3 id="nist">NIST</h3>
+
+<ul>
+  <li>[TrustFramework] 800-63-3 (<a href="https://pages.nist.gov/800-63-3/">NIST</a>)</li>
+</ul>
+
+<h3 id="cencentlic">CEN/CENTLIC</h3>
+<ul>
+  <li>[Blockchain] CEN/CENTLIC ✓ (CEN)</li>
+  <li>[Blockchain] ERC 725   (ERC-EIP)</li>
+</ul>
+
+<h3 id="fido">FIDO</h3>
+<ul>
+  <li>[ID-Non-SSI] FIDO (FIDO)</li>
+</ul>
+
+<h3 id="ngi">NGI</h3>
+<ul>
+  <li>[TrustRegistry] TRAIN (<a href="https://www.ngi.eu/funded_solution/essi_ioc_38/">NGI</a>)</li>
+</ul>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+  <!-- start custom analytics snippet -->
+
+
+
+
+<!-- end custom analytics snippet -->
+
+
+
+
+
+
+
+
+  </body>
+</html>
